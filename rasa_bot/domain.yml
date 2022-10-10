@@ -1,6 +1,5 @@
 version: "3.1"
-
-intents:
+intents: 
   - _Curious_to_dive_deeper
   - _Happy
   - _Neutral
@@ -11,24 +10,29 @@ intents:
   - _Angry
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter__Curious_to_dive_deeper:
+  - text: "Here is the sentiment of this : _Curious_to_dive_deeper."
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter__Happy:
+  - text: "Here is the sentiment of this : _Happy."
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter__Neutral:
+  - text: "Here is the sentiment of this : _Neutral."
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter__Surprised:
+  - text: "Here is the sentiment of this : _Surprised."
 
-  utter_goodbye:
-  - text: "Bye"
+  utter__Disgusted:
+  - text: "Here is the sentiment of this : _Disgusted."
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter__Sad:
+  - text: "Here is the sentiment of this : _Sad."
+
+  utter__Fearful:
+  - text: "Here is the sentiment of this : _Fearful."
+
+  utter__Angry:
+  - text: "Here is the sentiment of this : _Angry."
 
 session_config:
   session_expiration_time: 60
