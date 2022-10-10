@@ -31,13 +31,14 @@ for i in range(len(df["conversation_id"])):
             exec(f"table_{j}.append(i)")
 
 # Save in a nlu file all of the entries.
+# The most difficult was the indentation in this yml langage. 
 with open("../rasa_bot/data/nlu.yml", "w", encoding="utf-8") as f:
-    f.write('version: "3.0"\n')
-    f.write('nlu: \n')
+    f.write('version: "3.1"\n')
+    f.write('nlu:\n')
     for i in range(count):
         #Don't forget to replace the space of intent with underscore
-        f.write(f"- intent: {present[i].replace(' ','_')}\n   examples: | \n")
+        f.write(f"- intent: {present[i].replace(' ','_')}\n  examples: |\n")
         for j in globals()[f"table_{i}"]:
             # print(df["message"].values[i])
-            f.write(f"  -   {df['message'].values[j]}\n")
+            f.write(f"    - {df['message'].values[j]}\n")
     
