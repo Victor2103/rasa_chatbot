@@ -1,13 +1,43 @@
 version: "3.1"
 
 rules:
-
-- rule: Say goodbye anytime the user says goodbye
+- rule: Detect _Curious_to_dive_deeper when it is the right sentiment
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: _Curious_to_dive_deeper
+  - action: utter__Curious_to_dive_deeper
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Detect _Happy when it is the right sentiment
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: _Happy
+  - action: utter__Happy
+
+- rule: Detect _Neutral when it is the right sentiment
+  steps:
+  - intent: _Neutral
+  - action: utter__Neutral
+
+- rule: Detect _Surprised when it is the right sentiment
+  steps:
+  - intent: _Surprised
+  - action: utter__Surprised
+
+- rule: Detect _Disgusted when it is the right sentiment
+  steps:
+  - intent: _Disgusted
+  - action: utter__Disgusted
+
+- rule: Detect _Sad when it is the right sentiment
+  steps:
+  - intent: _Sad
+  - action: utter__Sad
+
+- rule: Detect _Fearful when it is the right sentiment
+  steps:
+  - intent: _Fearful
+  - action: utter__Fearful
+
+- rule: Detect _Angry when it is the right sentiment
+  steps:
+  - intent: _Angry
+  - action: utter__Angry
+
