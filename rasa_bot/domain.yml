@@ -1,38 +1,114 @@
 version: "3.1"
 intents: 
-  - _Curious_to_dive_deeper
-  - _Happy
-  - _Neutral
-  - _Surprised
-  - _Disgusted
-  - _Sad
-  - _Fearful
-  - _Angry
+  - cancel_order
+  - change_order
+  - change_shipping_address
+  - check_cancellation_fee
+  - check_invoice
+  - check_payment_methods
+  - check_refund_policy
+  - complaint
+  - contact_customer_service
+  - contact_human_agent
+  - create_account
+  - delete_account
+  - delivery_options
+  - delivery_period
+  - edit_account
+  - get_invoice
+  - get_refund
+  - newsletter_subscription
+  - payment_issue
+  - place_order
+  - recover_password
+  - registration_problems
+  - review
+  - set_up_shipping_address
+  - switch_account
+  - track_order
+  - track_refund
 
 responses:
-  utter__Curious_to_dive_deeper:
-  - text: "Here is the sentiment of this : _Curious_to_dive_deeper."
+  utter_cancel_order:
+  - text: "We detect this kind of intent : cancel_order."
 
-  utter__Happy:
-  - text: "Here is the sentiment of this : _Happy."
+  utter_change_order:
+  - text: "We detect this kind of intent : change_order."
 
-  utter__Neutral:
-  - text: "Here is the sentiment of this : _Neutral."
+  utter_change_shipping_address:
+  - text: "We detect this kind of intent : change_shipping_address."
 
-  utter__Surprised:
-  - text: "Here is the sentiment of this : _Surprised."
+  utter_check_cancellation_fee:
+  - text: "We detect this kind of intent : check_cancellation_fee."
 
-  utter__Disgusted:
-  - text: "Here is the sentiment of this : _Disgusted."
+  utter_check_invoice:
+  - text: "We detect this kind of intent : check_invoice."
 
-  utter__Sad:
-  - text: "Here is the sentiment of this : _Sad."
+  utter_check_payment_methods:
+  - text: "We detect this kind of intent : check_payment_methods."
 
-  utter__Fearful:
-  - text: "Here is the sentiment of this : _Fearful."
+  utter_check_refund_policy:
+  - text: "We detect this kind of intent : check_refund_policy."
 
-  utter__Angry:
-  - text: "Here is the sentiment of this : _Angry."
+  utter_complaint:
+  - text: "We detect this kind of intent : complaint."
+
+  utter_contact_customer_service:
+  - text: "We detect this kind of intent : contact_customer_service."
+
+  utter_contact_human_agent:
+  - text: "We detect this kind of intent : contact_human_agent."
+
+  utter_create_account:
+  - text: "We detect this kind of intent : create_account."
+
+  utter_delete_account:
+  - text: "We detect this kind of intent : delete_account."
+
+  utter_delivery_options:
+  - text: "We detect this kind of intent : delivery_options."
+
+  utter_delivery_period:
+  - text: "We detect this kind of intent : delivery_period."
+
+  utter_edit_account:
+  - text: "We detect this kind of intent : edit_account."
+
+  utter_get_invoice:
+  - text: "We detect this kind of intent : get_invoice."
+
+  utter_get_refund:
+  - text: "We detect this kind of intent : get_refund."
+
+  utter_newsletter_subscription:
+  - text: "We detect this kind of intent : newsletter_subscription."
+
+  utter_payment_issue:
+  - text: "We detect this kind of intent : payment_issue."
+
+  utter_place_order:
+  - text: "We detect this kind of intent : place_order."
+
+  utter_recover_password:
+  - text: "We detect this kind of intent : recover_password."
+
+  utter_registration_problems:
+  - text: "We detect this kind of intent : registration_problems."
+
+  utter_review:
+  - text: "We detect this kind of intent : review."
+
+  utter_set_up_shipping_address:
+  - text: "We detect this kind of intent : set_up_shipping_address."
+
+  utter_switch_account:
+  - text: "We detect this kind of intent : switch_account."
+
+  utter_track_order:
+  - text: "We detect this kind of intent : track_order."
+
+  utter_track_refund:
+  - text: "We detect this kind of intent : track_refund."
 
 session_config:
   session_expiration_time: 60
