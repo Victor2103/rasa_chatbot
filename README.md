@@ -6,7 +6,7 @@ Here is the commande to create the Docker Image and to push it on my private doc
 
 ```bash
 docker build . -t vvitcheff/big_chatbot:latest
-docker push vvitcheff/big_chatbot:latestou
+docker push vvitcheff/big_chatbot:latest
 ```
 
 # Train the model on the cloud with the tool AI Training
