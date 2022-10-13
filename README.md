@@ -12,7 +12,9 @@ After provided all of the examples for the all of the intents, we have to provid
 
 The last file to create is the “rules.yml”. This one specify what the chat bot do every time he found a specific intent. It can be for example when a user say hello respond with hello. In this file, I decided to say to the chatbot, if you found a intent respond with I detect this intent. The file to do this is named “process_rules.py”. 
 
-Here is a small diagram to understand the concept of the rasa files. 
+Here is a small diagram to understand what contains the nlu file.
+
+[![](https://mermaid.ink/img/pako:eNpVkdtqwkAQhl9l2KsW1La3QRSPILS9sSdIRCbupFncQ9hsqqn67h2NtXZgYZmZ_5vTTqycJBGJT49FDi_jxALbIH5-fO3URkOmNC2g3e7tR84GVLbcw_BmZgPZABEMyvUyc36Jy5UzBq28bQDDk2SqfBmAtmgKTXsYxzPYIOuCg7V1G-jepb6nMjA1nOWNK8cSUiILkrT6Ik9ycY3tsMHklzqJR2ihdhUE0hoMNQxm2sqk5MFlF3r_H-cj5H_NTeP3nCsB8mNtmTsqod9lEszAoCQIOV1AGnmwDdG6sxAtYcgbVJLXuDvyE8GphhIR8VdShpUOiWhdhd7QK0w1lcecXdNTIjLe8Fx9n4UP98U2EU3skNgD18EquHltVyIKvqKWqAqJgcYK-XpGRBnqkr0kVXD-qbnr6byHHwI1oAA)](https://mermaid.live/edit#pako:eNpVkdtqwkAQhl9l2KsW1La3QRSPILS9sSdIRCbupFncQ9hsqqn67h2NtXZgYZmZ_5vTTqycJBGJT49FDi_jxALbIH5-fO3URkOmNC2g3e7tR84GVLbcw_BmZgPZABEMyvUyc36Jy5UzBq28bQDDk2SqfBmAtmgKTXsYxzPYIOuCg7V1G-jepb6nMjA1nOWNK8cSUiILkrT6Ik9ycY3tsMHklzqJR2ihdhUE0hoMNQxm2sqk5MFlF3r_H-cj5H_NTeP3nCsB8mNtmTsqod9lEszAoCQIOV1AGnmwDdG6sxAtYcgbVJLXuDvyE8GphhIR8VdShpUOiWhdhd7QK0w1lcecXdNTIjLe8Fx9n4UP98U2EU3skNgD18EquHltVyIKvqKWqAqJgcYK-XpGRBnqkr0kVXD-qbnr6byHHwI1oAA)
 
 # Create the docker image
 
