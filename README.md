@@ -1,5 +1,3 @@
-# test
-
 # Documentation chat bot to the cloud
 
 I decided here to create a chat bot from scratch with the framework rasa. My first chatbot will an assistant chatbot for a customer. It is a kind of help where a client want for example information with a command he made on the website or want to complaint. So I have to found some data about this topic. 
@@ -21,8 +19,39 @@ Here is a small diagram to understand what contains the nlu file.
 Here is the commande to create the Docker Image and to push it on my private docker directory. The image will be by default public on your private directory.
 
 ```bash
-docker build . -t vvitcheff/big_chatbot:latestdocker push vvitcheff/big_chatbot:latest
+docker build . -t vvitcheff/big_chatbot:latest
+docker push vvitcheff/big_chatbot:latest
 ```
+
+# Create 2 tokens 
+
+One token is for operate the notebook and all of the work related to the rasa chatbot, the other to see the work I have done. One token is in read only and the other is only for the administrator. 
+
+```bash
+ovhai token create -l model=rasabotRO --role read token-RO-chatbot
+ovhai token create -l model=rasabotRW --role operator token-RW-chatbot
+```
+
+For each line, a value of the token is written. Don't forget to save it because you can't get it after this. Now when we create all of are product in OVH, we just have to add the label as options to have only access with the tokens and not with users. With this option, our connection is more secure. 
+
+# Create a VS code notebook and connect to remote on it (Not neccessarily). 
+
+Here is the comman to create the notebook. We add two tokens. One for RO only and the other for read and write. 
+
+```bash
+ovhai notebook run one-for-all vscode \
+--name vscode-ovh-machine \
+--framework-version v98-ovh.beta.1 \
+--volume myprivatecontainer@GRA/nb-data:/workspace/data:RO:cache \
+--volume ai-notebook@GRA/:/workspace/saved_model:RWD \
+--volume https://github.com/Victor2103/rasa_chatbot.git:/workspace/public-repo-git:RO \
+--cpu 10 \
+--token fbef4eed-98ce-4fc7-8490-085ad46cb07c
+-l model=rasabotRO
+-s ~/.ssh/id_rsa.pub
+```
+
+You can also of course stop the notebook when you want. It is really advice to stop the notebook when you don't using it. With the CLI command, you can restart the notebook when you want. 
 
 # Train the model on the cloud with the tool AI Training
 
