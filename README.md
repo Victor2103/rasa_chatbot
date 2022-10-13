@@ -46,9 +46,9 @@ ovhai notebook run one-for-all vscode \
 --volume ai-notebook@GRA/:/workspace/saved_model:RWD \
 --volume https://github.com/Victor2103/rasa_chatbot.git:/workspace/public-repo-git:RO \
 --cpu 10 \
---token fbef4eed-98ce-4fc7-8490-085ad46cb07c
--l model=rasabotRO
--s ~/.ssh/id_rsa.pub
+--token fbef4eed-98ce-4fc7-8490-085ad46cb07c \
+-l model=rasabotRO \
+-s ~/.ssh/id_rsa.pub 
 ```
 
 You can also of course stop the notebook when you want. It is really advice to stop the notebook when you don't using it. With the CLI command, you can restart the notebook when you want. 
