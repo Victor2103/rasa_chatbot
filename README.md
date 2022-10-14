@@ -46,12 +46,22 @@ ovhai notebook run one-for-all vscode \
 --volume ai-notebook@GRA/:/workspace/saved_model:RWD \
 --volume https://github.com/Victor2103/rasa_chatbot.git:/workspace/public-repo-git:RO \
 --cpu 10 \
---token fbef4eed-98ce-4fc7-8490-085ad46cb07c \
--l model=rasabotRO \
+--token ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO \
+--label model=rasabotRO \
 -s ~/.ssh/id_rsa.pub 
 ```
 
-You can also of course stop the notebook when you want. It is really advice to stop the notebook when you don't using it. With the CLI command, you can restart the notebook when you want. 
+You can also of course stop the notebook when you want. It is really advice to stop the notebook when you don't using it. With the CLI command, you can restart the notebook when you want. To do this, get the ID of your notebook with "ovhai notebook ls" and then run 
+
+```bash
+ovhai notebook stop <jobid>
+```
+
+To re run the notebook just launch 
+
+```bash
+ovhai notebook start --token ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO <jobid>
+```
 
 # Train the model on the cloud with the tool AI Training
 
