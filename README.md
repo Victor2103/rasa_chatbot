@@ -43,7 +43,7 @@ ovhai notebook run conda vscode \
 --name vscode-ovh-machine \
 --framework-version conda-py39-cuda11.2-v22-4 \
 --volume myprivatecontainer@GRA/nb-data:/workspace/data:RO:cache \
---volume ai-notebook@GRA/:/workspace/saved_model:RWD \
+--volume ai-notebook@GRA/:/workspace:RW \
 --volume https://github.com/Victor2103/rasa_chatbot.git:/workspace/public-repo-git:RO \
 --cpu 10 \
 --token ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO \
@@ -62,6 +62,17 @@ To re run the notebook just launch
 ```bash
 ovhai notebook start --token ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO <jobid>
 ```
+
+Once your notebook is running, open a terminal and go into the folder public-repo-git. Then install pip with conda and install the requirements for rasa with the file requirements_rasa.txt. Here are the command to do so. You can after this train the model. 
+
+```bash
+conda install pip
+python3 -m pip install --no-cache-dir -r requirements_rasa.txt
+cd rasa_bot/
+rasa train
+```
+
+If you want to save the model in your object storage, put your model on the folder saved_model. 
 
 # Train the model on the cloud with the tool AI Training
 
