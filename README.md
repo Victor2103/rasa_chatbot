@@ -39,9 +39,9 @@ For each line, a value of the token is written. Don't forget to save it because 
 Here is the comman to create the notebook. We add two tokens. One for RO only and the other for read and write. 
 
 ```bash
-ovhai notebook run one-for-all vscode \
+ovhai notebook run conda vscode \
 --name vscode-ovh-machine \
---framework-version v98-ovh.beta.1 \
+--framework-version conda-py39-cuda11.2-v22-4 \
 --volume myprivatecontainer@GRA/nb-data:/workspace/data:RO:cache \
 --volume ai-notebook@GRA/:/workspace/saved_model:RWD \
 --volume https://github.com/Victor2103/rasa_chatbot.git:/workspace/public-repo-git:RO \
