@@ -85,3 +85,13 @@ ovhai job run vvitcheff/big_chatbot:latest \
 --volume models-to-save@GRA/rasa-models:/workspace/rasa_bot/models:RW \
 -- bash -c "cd rasa_bot && rasa telemetry disable && rasa train --force --fixed-model-name customer-model"
 ```
+
+If you want to launch the job again to get a new model, run : 
+
+```bash
+ovhai job rerun a85c1179-49b9-4666-b988-95571e1f68c0 \
+--gpu 4 \
+--volume myprivatecontainer@GRA/:/workspace/data:RO \
+--volume models-to-save@GRA/rasa-models:/workspace/rasa_bot/models:RW \
+-- bash -c "cd rasa_bot && rasa telemetry disable && rasa train --force --fixed-model-name customer-model" 
+```
