@@ -4,19 +4,56 @@ intents:
   - bye
   - consummation
   - help
+  - inform_house
+  - inform_transport
+  - inform_work
+
+entities:
+- house
+- typeoftransport
+- typeofwork
+
+slots:
+  house:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: house
+  typeoftransport:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: typeoftransport
+  typeofwork:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: typeofwork
 
 responses:
   utter_greetting:
-  - text: "Hello there"
+  - text: "Write here the response of the chatbot."
 
   utter_bye:
-  - text: "Good bye"
+  - text: "Write here the response of the chatbot."
 
   utter_consummation:
-  - text: "Today, you have pay 20€. "
+  - text: "Write here the response of the chatbot."
 
   utter_help:
-  - text: "Try to launch your machine at night. "
+  - text: "Write here the response of the chatbot."
+
+  utter_inform_house:
+  - text: "Write here the response of the chatbot."
+
+  utter_inform_transport:
+  - text: "Write here the response of the chatbot."
+
+  utter_inform_work:
+  - text: "Write here the response of the chatbot."
 
 session_config:
   session_expiration_time: 60

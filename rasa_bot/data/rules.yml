@@ -21,3 +21,18 @@ rules:
   - intent: help
   - action: utter_help
 
+- rule: Detect inform_house when the user want to do this 
+  steps:
+  - intent: inform_house
+  - action: utter_inform_house
+
+- rule: Detect inform_transport when the user want to do this 
+  steps:
+  - intent: inform_transport
+  - action: utter_inform_transport
+
+- rule: Detect inform_work when the user want to do this 
+  steps:
+  - intent: inform_work
+  - action: utter_inform_work
+

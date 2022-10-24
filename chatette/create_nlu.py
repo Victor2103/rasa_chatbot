@@ -9,23 +9,38 @@ with open("output/train/output.json") as f:
 my_data = data["rasa_nlu_data"]["common_examples"]
 
 
-#Make a table with the name of the intents. 
-intents=[]
+# Make a table with the name of the intents.
+intents = []
 for i in my_data:
     if i["intent"] in intents:
         pass
     else:
         intents.append(i["intent"])
 
-# Count the number of intent in the json file.
+# Make a table with the name of the intents.
+intents = []
+for i in my_data:
+    if i["intent"] in intents:
+        pass
+    else:
+        intents.append(i["intent"])
 
 
 with open("../rasa_bot/data/nlu.yml", "w", encoding="utf-8") as f:
-#with open("yml_test/nlu.yml", "w", encoding="utf-8") as f:
+    # with open("yml_test/nlu.yml", "w", encoding="utf-8") as f:
     f.write('version: "3.1"\n')
     f.write('nlu:\n')
     for i in intents:
         f.write(f"- intent: {i}\n  examples: |\n")
         for j in my_data:
-            if (j["intent"]==i):
-                f.write(f"    - {j['text']}\n")
+            if (len(j["entities"]) == 0):
+                if (j["intent"] == i):
+                    f.write(f"    - {j['text']}\n")
+            else:
+                # Transform the text intent to use entities in it.
+                entity = j["entities"][0]
+                text = j["text"]
+                text = text.replace(
+                    entity["value"], f"[{entity['value']}]({entity['entity']})")
+                if (j["intent"] == i):
+                    f.write(f"    - {text}\n")
