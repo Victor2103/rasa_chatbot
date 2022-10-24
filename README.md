@@ -63,7 +63,11 @@ To re run the notebook just launch
 ovhai notebook start --token ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO <jobid>
 ```
 
-Once your notebook is running, open a terminal and go into the folder public-repo-git. Then install pip with conda and install the requirements for rasa with the file requirements_rasa.txt. Here are the command to do so. You can after this train the model. 
+Once your notebook is running, open a terminal and go into the folder public-repo-git. Then install pip with conda and install the requirements for rasa with the file requirements_rasa.txt. Here are the command to do so. You can after this train the model. To do this, you can connect in a terminal by ssh in your machine or connect on the browser with the token we create before. 
+
+```bash
+ssh 4eb28334-ff26-475f-8233-2a2769f8f3b2@gra.training.ai.cloud.ovh.net
+```
 
 ```bash
 conda install pip

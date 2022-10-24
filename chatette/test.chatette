@@ -1,13 +1,15 @@
 // Master file defining the intents
-%[&greet](2)
-    ~[hello][!?]
 
-%[&inform-mood](5)
-    [well?] [&i][~[am#elision]| ~[am#no elision]] @[mood#good][!?] [:)?]
-    [well?] [&i][~[am#elision]| ~[am#no elision]] @[mood#bad][...?]
-    [&i] feel @[mood#good][!?] [:)?]
-    [&i] feel @[mood#bad][...?]
+%[&greetting](5)
+    ~[hello], what's up ?
+    ~[hello]
 
-%[&goodbye](2)
-    ~[bye][!?]
+%[&bye](5)
+    ~[bye]
+    Ok then ~[bye]
+    ~[thank], ~[bye]
 
+%[consummation](20)
+    ~[asking] my ~[consommation] 
+
+|aliases_and_slots.chatette

@@ -1,25 +1,27 @@
 // File defining the aliases and slots
 ~[hello]
     hello
-    hi
-
-~[am#elision]
-    'm
-    've been
-~[am#no elision]
-    am
-    have been
+    hi 
+    good morning
 
 ~[bye]
-    bye
-    goodbye
+    good bye
+    bye 
+    nice day
     see you
 
-@[mood#good]
-    good
-    fine = good
-    great = good
-@[mood#bad]
-    bad = /
-    not so good = bad
-    terrible = bad
+~[consommation]
+    consommation
+    consuming
+    usage
+
+~[thank]
+    Thanks
+    Thank you
+    
+~[asking]
+    Can you tell me
+    What's 
+    Tell me
+    
+

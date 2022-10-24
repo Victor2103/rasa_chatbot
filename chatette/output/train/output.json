@@ -3,102 +3,101 @@
     "common_examples": [
       {
         "entities": [],
-        "intent": "greet",
-        "text": "hello!"
+        "intent": "greetting",
+        "text": "hello, what's up ?"
       },
       {
         "entities": [],
-        "intent": "greet",
-        "text": "Hello"
-      },
-      {
-        "entities": [
-          {
-            "end": 12,
-            "entity": "mood",
-            "start": 7,
-            "value": "good"
-          }
-        ],
-        "intent": "inform-mood",
-        "text": "I feel great"
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "mood",
-            "start": 7,
-            "value": "bad"
-          }
-        ],
-        "intent": "inform-mood",
-        "text": "I feel terrible..."
-      },
-      {
-        "entities": [
-          {
-            "end": 13,
-            "entity": "mood",
-            "start": 5,
-            "value": "bad"
-          }
-        ],
-        "intent": "inform-mood",
-        "text": "i am terrible"
-      },
-      {
-        "entities": [
-          {
-            "end": 21,
-            "entity": "mood",
-            "start": 17,
-            "value": "good"
-          }
-        ],
-        "intent": "inform-mood",
-        "text": "well i have been fine! :)"
-      },
-      {
-        "entities": [
-          {
-            "end": 17,
-            "entity": "mood",
-            "start": 9,
-            "value": "bad"
-          }
-        ],
-        "intent": "inform-mood",
-        "text": "well i'm terrible"
+        "intent": "greetting",
+        "text": "Hi, what's up ?"
       },
       {
         "entities": [],
-        "intent": "goodbye",
-        "text": "Bye"
+        "intent": "greetting",
+        "text": "Hi"
       },
       {
         "entities": [],
-        "intent": "goodbye",
-        "text": "goodbye!"
+        "intent": "greetting",
+        "text": "hi, what's up ?"
+      },
+      {
+        "entities": [],
+        "intent": "greetting",
+        "text": "good morning, what's up ?"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "Ok then good bye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "Ok then nice day"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "Thanks, bye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "nice day"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "ok then bye"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Tell me my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Tell me my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "What's my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Can you tell me my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "What's my usage"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Tell me my usage"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Can you tell me my usage"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Can you tell me my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "What's my consuming"
       }
     ],
-    "entity_synonyms": [
-      {
-        "synonyms": [
-          "fine",
-          "good",
-          "great"
-        ],
-        "value": "good"
-      },
-      {
-        "synonyms": [
-          "terrible",
-          "not so good"
-        ],
-        "value": "bad"
-      }
-    ],
+    "entity_synonyms": [],
     "lookup_tables": [],
     "regex_features": []
   }
