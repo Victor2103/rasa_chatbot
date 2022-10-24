@@ -20,8 +20,8 @@ for i in my_data:
 
 
 
-
-with open("yml_test/domain.yml", "w", encoding="utf-8") as f:
+with open("../rasa_bot/domain.yml", "w", encoding="utf-8") as f:
+#with open("yml_test/domain.yml", "w", encoding="utf-8") as f:
     f.write('version: "3.1"\nintents: \n')
     for j in intents:
         f.write(f'  - {j}\n')

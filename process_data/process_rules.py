@@ -20,7 +20,7 @@ print(present)
 
 
 #In period of test use the first line of command else use the second line
-#with open("rules.yml", "w", encoding="utf-8") as f:
+#with open("yml_test/rules.yml", "w", encoding="utf-8") as f:
 with open("../rasa_bot/data/rules.yml", "w", encoding="utf-8") as f:
     f.write('version: "3.1"\n\nrules:\n')
     for i in present:

@@ -18,8 +18,8 @@ for i in my_data:
         intents.append(i["intent"])
 
 
-
-with open("yml_test/rules.yml", "w", encoding="utf-8") as f:
+with open("../rasa_bot/data/rules.yml", "w", encoding="utf-8") as f:
+#with open("yml_test/rules.yml", "w", encoding="utf-8") as f:
     f.write('version: "3.1"\n\nrules:\n')
     for i in intents:
         f.write(f'- rule: Detect {i} when the user want to do this \n  steps:\n  - intent: {i}\n  - action: utter_{i}\n\n')
