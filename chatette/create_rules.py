@@ -17,14 +17,9 @@ for i in my_data:
     else:
         intents.append(i["intent"])
 
-# Count the number of intent in the json file.
 
 
-with open("yml_test/nlu.yml", "w", encoding="utf-8") as f:
-    f.write('version: "3.1"\n')
-    f.write('nlu:\n')
+with open("yml_test/rules.yml", "w", encoding="utf-8") as f:
+    f.write('version: "3.1"\n\nrules:\n')
     for i in intents:
-        f.write(f"- intent: {i}\n  examples: |\n")
-        for j in my_data:
-            if (j["intent"]==i):
-                f.write(f"    - {j['text']}\n")
+        f.write(f'- rule: Detect {i} when the user want to do this \n  steps:\n  - intent: {i}\n  - action: utter_{i}\n\n')
