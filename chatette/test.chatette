@@ -10,6 +10,12 @@
     ~[thank], ~[bye]
 
 %[consummation](20)
-    ~[asking] my ~[consommation] 
+    ~[asking-conso] my ~[consommation] 
+
+%[help](30)
+    ~[asking_good_ways] ~[improve-verb] my ~[consommation]
+    
+
+
 
 |aliases_and_slots.chatette

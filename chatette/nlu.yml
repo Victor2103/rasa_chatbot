@@ -1,2 +1,62 @@
 version: "3.1"
 nlu:
+- intent: greetting
+  examples: |
+    - good morning, what's up ?
+    - hi
+    - good morning
+    - Good morning
+    - Good morning, what's up ?
+- intent: bye
+  examples: |
+    - Ok then good bye
+    - Ok then nice day
+    - ok then bye
+    - ok then good bye
+    - thanks, see you
+- intent: consummation
+  examples: |
+    - What's my consuming
+    - I want to know my usage
+    - Tell me my usage
+    - What's my consommation
+    - Can you tell me my consommation
+    - I want to know my consuming
+    - Tell me my consuming
+    - Tell me my consommation
+    - What's my usage
+    - I want to know my consommation
+    - Can you tell me my consuming
+    - Can you tell me my usage
+- intent: help
+  examples: |
+    - I want to increase my usage
+    - Are they any good ways to upgrade my consommation
+    - Can you develop my usage
+    - Is there any ways to boost my consuming
+    - Help me to ameliorate my usage
+    - What can I do for improve my consuming
+    - Are they any good ways to develop my consuming
+    - Can you upgrade my usage
+    - Are they any good ways to boost my consuming
+    - Is there any ways to ameliorate my usage
+    - Help me to develop my usage
+    - Help me to improve my consuming
+    - I want to boost my consuming
+    - I want to upgrade my consommation
+    - What can I do for boost my consommation
+    - Help me to increase my consuming
+    - Help me to ameliorate my consommation
+    - What can I do for improve my usage
+    - Help me to improve my consommation
+    - Help me to upgrade my usage
+    - I want to ameliorate my consommation
+    - Are they any good ways to increase my consuming
+    - Are they any good ways to improve my consuming
+    - Are they any good ways to ameliorate my consommation
+    - Are they any good ways to increase my usage
+    - I want to develop my consommation
+    - I want to boost my usage
+    - What can I do for ameliorate my consommation
+    - Can you improve my consommation
+    - What can I do for increase my consommation

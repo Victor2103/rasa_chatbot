@@ -4,27 +4,27 @@
       {
         "entities": [],
         "intent": "greetting",
-        "text": "hello, what's up ?"
-      },
-      {
-        "entities": [],
-        "intent": "greetting",
-        "text": "Hi, what's up ?"
-      },
-      {
-        "entities": [],
-        "intent": "greetting",
-        "text": "Hi"
-      },
-      {
-        "entities": [],
-        "intent": "greetting",
-        "text": "hi, what's up ?"
-      },
-      {
-        "entities": [],
-        "intent": "greetting",
         "text": "good morning, what's up ?"
+      },
+      {
+        "entities": [],
+        "intent": "greetting",
+        "text": "hi"
+      },
+      {
+        "entities": [],
+        "intent": "greetting",
+        "text": "good morning"
+      },
+      {
+        "entities": [],
+        "intent": "greetting",
+        "text": "Good morning"
+      },
+      {
+        "entities": [],
+        "intent": "greetting",
+        "text": "Good morning, what's up ?"
       },
       {
         "entities": [],
@@ -39,27 +39,32 @@
       {
         "entities": [],
         "intent": "bye",
-        "text": "Thanks, bye"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
-        "text": "nice day"
-      },
-      {
-        "entities": [],
-        "intent": "bye",
         "text": "ok then bye"
       },
       {
         "entities": [],
-        "intent": "consummation",
-        "text": "Tell me my consuming"
+        "intent": "bye",
+        "text": "ok then good bye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "thanks, see you"
       },
       {
         "entities": [],
         "intent": "consummation",
-        "text": "Tell me my consommation"
+        "text": "What's my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "I want to know my usage"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Tell me my usage"
       },
       {
         "entities": [],
@@ -74,17 +79,27 @@
       {
         "entities": [],
         "intent": "consummation",
+        "text": "I want to know my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Tell me my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Tell me my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
         "text": "What's my usage"
       },
       {
         "entities": [],
         "intent": "consummation",
-        "text": "Tell me my usage"
-      },
-      {
-        "entities": [],
-        "intent": "consummation",
-        "text": "Can you tell me my usage"
+        "text": "I want to know my consommation"
       },
       {
         "entities": [],
@@ -94,7 +109,157 @@
       {
         "entities": [],
         "intent": "consummation",
-        "text": "What's my consuming"
+        "text": "Can you tell me my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "I want to increase my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to upgrade my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Can you develop my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Is there any ways to boost my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Help me to ameliorate my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "What can I do for improve my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to develop my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Can you upgrade my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to boost my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Is there any ways to ameliorate my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Help me to develop my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Help me to improve my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "I want to boost my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "I want to upgrade my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "What can I do for boost my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Help me to increase my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Help me to ameliorate my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "What can I do for improve my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Help me to improve my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Help me to upgrade my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "I want to ameliorate my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to increase my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to improve my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to ameliorate my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to increase my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "I want to develop my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "I want to boost my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "What can I do for ameliorate my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Can you improve my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "What can I do for increase my consommation"
       }
     ],
     "entity_synonyms": [],
