@@ -1,138 +1,23 @@
 version: "3.1"
 
 rules:
-- rule: Detect cancel_order when the user want to do this 
+- rule: Detect greetting when the user want to do this 
   steps:
-  - intent: cancel_order
-  - action: utter_cancel_order
+  - intent: greetting
+  - action: utter_greetting
 
-- rule: Detect change_order when the user want to do this 
+- rule: Detect bye when the user want to do this 
   steps:
-  - intent: change_order
-  - action: utter_change_order
+  - intent: bye
+  - action: utter_bye
 
-- rule: Detect change_shipping_address when the user want to do this 
+- rule: Detect consummation when the user want to do this 
   steps:
-  - intent: change_shipping_address
-  - action: utter_change_shipping_address
+  - intent: consummation
+  - action: utter_consummation
 
-- rule: Detect check_cancellation_fee when the user want to do this 
+- rule: Detect help when the user want to do this 
   steps:
-  - intent: check_cancellation_fee
-  - action: utter_check_cancellation_fee
-
-- rule: Detect check_invoice when the user want to do this 
-  steps:
-  - intent: check_invoice
-  - action: utter_check_invoice
-
-- rule: Detect check_payment_methods when the user want to do this 
-  steps:
-  - intent: check_payment_methods
-  - action: utter_check_payment_methods
-
-- rule: Detect check_refund_policy when the user want to do this 
-  steps:
-  - intent: check_refund_policy
-  - action: utter_check_refund_policy
-
-- rule: Detect complaint when the user want to do this 
-  steps:
-  - intent: complaint
-  - action: utter_complaint
-
-- rule: Detect contact_customer_service when the user want to do this 
-  steps:
-  - intent: contact_customer_service
-  - action: utter_contact_customer_service
-
-- rule: Detect contact_human_agent when the user want to do this 
-  steps:
-  - intent: contact_human_agent
-  - action: utter_contact_human_agent
-
-- rule: Detect create_account when the user want to do this 
-  steps:
-  - intent: create_account
-  - action: utter_create_account
-
-- rule: Detect delete_account when the user want to do this 
-  steps:
-  - intent: delete_account
-  - action: utter_delete_account
-
-- rule: Detect delivery_options when the user want to do this 
-  steps:
-  - intent: delivery_options
-  - action: utter_delivery_options
-
-- rule: Detect delivery_period when the user want to do this 
-  steps:
-  - intent: delivery_period
-  - action: utter_delivery_period
-
-- rule: Detect edit_account when the user want to do this 
-  steps:
-  - intent: edit_account
-  - action: utter_edit_account
-
-- rule: Detect get_invoice when the user want to do this 
-  steps:
-  - intent: get_invoice
-  - action: utter_get_invoice
-
-- rule: Detect get_refund when the user want to do this 
-  steps:
-  - intent: get_refund
-  - action: utter_get_refund
-
-- rule: Detect newsletter_subscription when the user want to do this 
-  steps:
-  - intent: newsletter_subscription
-  - action: utter_newsletter_subscription
-
-- rule: Detect payment_issue when the user want to do this 
-  steps:
-  - intent: payment_issue
-  - action: utter_payment_issue
-
-- rule: Detect place_order when the user want to do this 
-  steps:
-  - intent: place_order
-  - action: utter_place_order
-
-- rule: Detect recover_password when the user want to do this 
-  steps:
-  - intent: recover_password
-  - action: utter_recover_password
-
-- rule: Detect registration_problems when the user want to do this 
-  steps:
-  - intent: registration_problems
-  - action: utter_registration_problems
-
-- rule: Detect review when the user want to do this 
-  steps:
-  - intent: review
-  - action: utter_review
-
-- rule: Detect set_up_shipping_address when the user want to do this 
-  steps:
-  - intent: set_up_shipping_address
-  - action: utter_set_up_shipping_address
-
-- rule: Detect switch_account when the user want to do this 
-  steps:
-  - intent: switch_account
-  - action: utter_switch_account
-
-- rule: Detect track_order when the user want to do this 
-  steps:
-  - intent: track_order
-  - action: utter_track_order
-
-- rule: Detect track_refund when the user want to do this 
-  steps:
-  - intent: track_refund
-  - action: utter_track_refund
+  - intent: help
+  - action: utter_help
 
