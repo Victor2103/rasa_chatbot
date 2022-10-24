@@ -84,7 +84,7 @@ Here is the command to launch on the cli command. You must have the cli command 
 
 ```bash
 ovhai job run vvitcheff/big_chatbot:latest \
---gpu 4 \
+--gpu 2 \
 --volume myprivatecontainer@GRA/:/workspace/data:RO \
 --volume models-to-save@GRA/rasa-models:/workspace/rasa_bot/models:RW \
 -- bash -c "cd rasa_bot && rasa telemetry disable && rasa train --force --fixed-model-name customer-model"

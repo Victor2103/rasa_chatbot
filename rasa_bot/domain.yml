@@ -35,25 +35,25 @@ slots:
 
 responses:
   utter_greetting:
-  - text: "Write here the response of the chatbot."
+  - text: "Hello you"
 
   utter_bye:
-  - text: "Write here the response of the chatbot."
+  - text: "Good bye ! "
 
   utter_consummation:
-  - text: "Write here the response of the chatbot."
+  - text: "I don't know I need more information"
 
   utter_help:
-  - text: "Write here the response of the chatbot."
+  - text: "Yes, I can can you tell me where you live ?"
 
   utter_inform_house:
-  - text: "Write here the response of the chatbot."
+  - text: "Ok you tell me you live in a house/appartment. "
 
   utter_inform_transport:
-  - text: "Write here the response of the chatbot."
+  - text: "Ok I understand you take you car/bike/etc to go to work."
 
   utter_inform_work:
-  - text: "Write here the response of the chatbot."
+  - text: "Ok so you work only on remote/on site."
 
 session_config:
   session_expiration_time: 60
