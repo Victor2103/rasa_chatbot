@@ -41,5 +41,27 @@
     develop
     increase
 
+@[house]
+    flat
+    house
+    residence
+    house
+    apartment
+    chamber
+    suite
     
+@[typeofwork]
+    teleworking
+    remote working
+    on site
+    on a building
 
+@[typeoftransport]
+    car
+    bike
+    common transport
+    RER
+    metro
+    bus
+    on foot
+    

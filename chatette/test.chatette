@@ -14,7 +14,22 @@
 
 %[help](30)
     ~[asking_good_ways] ~[improve-verb] my ~[consommation]
-    
+
+%[inform_house](20)
+    I live in a @[house]. 
+    I'm living in a @[house].
+    I've got a location in a @[house]. 
+
+%[inform_transport](20)
+    I take the @[typeoftransport].
+    I travel with my @[typeoftransport].
+    I usually take the @[typeoftransport].
+    I pick the @[typeoftransport] to go to work.
+
+%[inform_work](20)
+    I work @[typeofwork].
+    I usually task @[typeofwork].
+    I usually perform to work @[typeofwork].
 
 
 
