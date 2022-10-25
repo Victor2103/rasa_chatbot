@@ -1,13 +1,13 @@
 import pandas as pd
 
-df = pd.read_csv("topical_chat.csv", sep=",")
+df = pd.read_csv("Customer_data.csv", sep=",")
 
 count = 0
 present = []
 
 #print(df)
 
-for i in df["sentiment"]:
+for i in df["intent"]:
     if i not in present:
         present.append(i)
         count += 1
@@ -21,17 +21,18 @@ for i in range(0, count):
 # print(df["message"].to_numpy())
 
 # Transform all the message into an array
-text = df["message"].to_numpy()
+text = df["utterance"].to_numpy()
 
 # Get the name of each sentiment and save all the conversation id related to the sentiment
-for i in range(len(df["conversation_id"])):
+for i in range(len(df["utterance"])):
     # We add the number of the conversation in the table corresponding to the sentiment
     for j in range(count):
-        if (df["sentiment"].values[i] == present[j]):
+        if (df["intent"].values[i] == present[j]):
             exec(f"table_{j}.append(i)")
 
 # Save in a nlu file all of the entries.
 # The most difficult was the indentation in this yml langage. 
+#with open("yml_test/nlu.yml", "w", encoding="utf-8") as f:
 with open("../rasa_bot/data/nlu.yml", "w", encoding="utf-8") as f:
     f.write('version: "3.1"\n')
     f.write('nlu:\n')
@@ -40,5 +41,5 @@ with open("../rasa_bot/data/nlu.yml", "w", encoding="utf-8") as f:
         f.write(f"- intent: {present[i].replace(' ','_')}\n  examples: |\n")
         for j in globals()[f"table_{i}"]:
             # print(df["message"].values[i])
-            f.write(f"    - {df['message'].values[j]}\n")
+            f.write(f"    - {df['utterance'].values[j]}\n")
     

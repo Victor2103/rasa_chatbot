@@ -1,38 +1,59 @@
 version: "3.1"
 intents: 
-  - _Curious_to_dive_deeper
-  - _Happy
-  - _Neutral
-  - _Surprised
-  - _Disgusted
-  - _Sad
-  - _Fearful
-  - _Angry
+  - greetting
+  - bye
+  - consummation
+  - help
+  - inform_house
+  - inform_transport
+  - inform_work
+
+entities:
+- house
+- typeoftransport
+- typeofwork
+
+slots:
+  house:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: house
+  typeoftransport:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: typeoftransport
+  typeofwork:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: typeofwork
 
 responses:
-  utter__Curious_to_dive_deeper:
-  - text: "Here is the sentiment of this : _Curious_to_dive_deeper."
+  utter_greetting:
+  - text: "Hello you"
 
-  utter__Happy:
-  - text: "Here is the sentiment of this : _Happy."
+  utter_bye:
+  - text: "Good bye ! "
 
-  utter__Neutral:
-  - text: "Here is the sentiment of this : _Neutral."
+  utter_consummation:
+  - text: "I don't know I need more information"
 
-  utter__Surprised:
-  - text: "Here is the sentiment of this : _Surprised."
+  utter_help:
+  - text: "Yes, I can can you tell me where you live ?"
 
-  utter__Disgusted:
-  - text: "Here is the sentiment of this : _Disgusted."
+  utter_inform_house:
+  - text: "Ok you tell me you live in a house/appartment. "
 
-  utter__Sad:
-  - text: "Here is the sentiment of this : _Sad."
+  utter_inform_transport:
+  - text: "Ok I understand you take you car/bike/etc to go to work."
 
-  utter__Fearful:
-  - text: "Here is the sentiment of this : _Fearful."
-
-  utter__Angry:
-  - text: "Here is the sentiment of this : _Angry."
+  utter_inform_work:
+  - text: "Ok so you work only on remote/on site."
 
 session_config:
   session_expiration_time: 60
