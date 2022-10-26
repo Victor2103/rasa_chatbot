@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 ]
 
 ALLOWED_HOSTS=[
-    "0.0.0.0"
+    "*"
 ]
 
 MIDDLEWARE = [
