@@ -1,6 +1,7 @@
 process_data
 chatette
 Dockerfile
+deploy.Dockerfile
 .gitignore
 requirements_pandas.txt
 README.md

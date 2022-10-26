@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'chatbot'
 ]
 
+ALLOWED_HOSTS=[
+    "0.0.0.0"
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
