@@ -99,3 +99,9 @@ ovhai job rerun a85c1179-49b9-4666-b988-95571e1f68c0 \
 --volume models-to-save@GRA/rasa-models:/workspace/rasa_bot/models:RW \
 -- bash -c "cd rasa_bot && rasa telemetry disable && rasa train --force --fixed-model-name customer-model" 
 ```
+
+docker build . -f deploy.Dockerfile -t vvitcheff/django-rasa:latest
+
+docker push vvitcheff/django-rasa:latest
+
+ovhai app run --name django-rasa --token ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO --default-http-port 8000 --cpu 4
