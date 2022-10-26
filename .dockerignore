@@ -5,4 +5,4 @@ deploy.Dockerfile
 .gitignore
 requirements_pandas.txt
 README.md
-django_app
+#django_app
