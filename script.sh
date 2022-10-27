@@ -7,4 +7,4 @@
 #gnome-terminal -- bash -c "cd django_app && python3 manage.py runserver"
 
 cd rasa_bot && rasa run -m models --enable-api --cors '*' -i 127.0.0.1 --ssl-certificate ../cert/CA/CA.pem --ssl-keyfile ../cert/CA/CA.key --ssl-password ovhtest &
-cd django_app && ls && python3 manage.py runserver 0.0.0.0:8000
+cd django_app && python3 manage.py runserver 0.0.0.0:8000
