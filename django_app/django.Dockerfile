@@ -10,6 +10,6 @@ RUN chown -R 42420:42420 /workspace
 ENV HOME=/workspace
 
 
-#EXPOSE 5005
+
 EXPOSE 8000
-CMD 
+CMD python3 manage.py runserver 0.0.0.0:8000

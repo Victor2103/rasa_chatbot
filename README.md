@@ -104,4 +104,4 @@ docker build . -f deploy.Dockerfile -t vvitcheff/django-rasa:latest
 
 docker push vvitcheff/django-rasa:latest
 
-ovhai app run --name django-rasa --token ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO --default-http-port 8000 --cpu 4 vvitcheff/django-rasa:latest
+ovhai app run --name rasa-model --token ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO --default-http-port 5005 --cpu 4 vvitcheff/rasa-model:latest
