@@ -107,3 +107,5 @@ docker push vvitcheff/django-rasa:latest
 ovhai app run --name rasa-model --token ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO --default-http-port 5005 --cpu 4 vvitcheff/rasa-model:latest
 
 curl -H "Authorization: Bearer ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO" -v https://354a2e9d-4197-4a1e-b054-b01f673a0a26.app.gra.training.ai.cloud.ovh.net/
+
+curl -X POST -H "Authorization: Bearer ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO" -H "Content-Type: application/json" -d '{"text":"What is my consommation"}' https://354a2e9d-4197-4a1e-b054-b01f673a0a26.app.gra.training.ai.cloud.ovh.net/model/parse
