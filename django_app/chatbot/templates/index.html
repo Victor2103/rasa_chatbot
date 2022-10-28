@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  
+    <script>!(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+          "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+          // Replace 1.x.x with the version that you want
+          (e.async = !0),
+          (e.onload = () => {
+            window.WebChat.default(
+              {
+                initPayload: '/greetting',
+                customData: { language: "en" },
+                //socketUrl: "https://fd9dcb42-da0e-491c-8e3d-5f8c9ccf591c.app.gra.training.ai.cloud.ovh.net/" ,
+                socketUrl : "https://127.0.0.1:5005"
+                // add other props here
+              },
+              null
+            );
+          }),
+          t.insertBefore(e, t.firstChild);
+      })();
+      </script>
+  </body>
+  </html>

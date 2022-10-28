@@ -32,7 +32,7 @@ for i in range(len(df["utterance"])):
 
 # Save in a nlu file all of the entries.
 # The most difficult was the indentation in this yml langage. 
-#with open("nlu.yml", "w", encoding="utf-8") as f:
+#with open("yml_test/nlu.yml", "w", encoding="utf-8") as f:
 with open("../rasa_bot/data/nlu.yml", "w", encoding="utf-8") as f:
     f.write('version: "3.1"\n')
     f.write('nlu:\n')

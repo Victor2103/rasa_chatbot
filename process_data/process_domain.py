@@ -18,7 +18,7 @@ for i in range(len(present)):
     present[i] = present[i].replace(" ", "_")
 print(present)
 
-#with open("domain.yml", "w", encoding="utf-8") as f:
+#with open("yml_test/domain.yml", "w", encoding="utf-8") as f:
 with open("../rasa_bot/domain.yml", "w", encoding="utf-8") as f:
     f.write('version: "3.1"\nintents: \n')
     for j in present:
