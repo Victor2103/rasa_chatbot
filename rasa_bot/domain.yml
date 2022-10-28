@@ -33,6 +33,15 @@ slots:
     - type: from_entity
       entity: typeofwork
 
+forms:
+  bilan:
+    required_slots:
+      - house
+      - typeoftransport
+      - typeofwork
+
+
+
 responses:
   utter_greetting:
   - text: "Hello you"
@@ -54,6 +63,19 @@ responses:
 
   utter_inform_work:
   - text: "Ok so you work only on remote/on site."
+
+  utter_ask_bilan_house:
+  - text: "Can you tell me were you live ? Is it an appartment a house ?"
+
+  utter_ask_bilan_typeoftransport:
+  - text: "Can you tell me which transport you take to go to work ?"
+
+  utter_ask_bilan_typeofwork:
+  - text: "Do you work on remote or do you go on site ?"
+
+actions:
+- validate_bilan
+
 
 session_config:
   session_expiration_time: 60
