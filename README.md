@@ -101,7 +101,7 @@ ovhai job rerun <jobid> \
 --gpu 4 \
 --volume <containerwithdata>@<region>/:/workspace/data:RO \
 --volume <containerforsavingthemodel>@<region>/rasa-models:/workspace/rasa_bot/models:RW \
--- bash -c "cd rasa_bot && rasa telemetry disable && rasa train --force --fixed-model-name customer-model"
+-- bash -c "cd rasa_bot && rasa train --force --fixed-model-name customer-model"
 ```
 
 Now that you have a model, we can deploy it to use it with a framework. 
@@ -135,22 +135,23 @@ Here are two examples of get request, one will give us the response when we go t
 
 ```bash
 curl -H “Authorization: Bearer <token>" \
-https://<jobid>.app.gra.training.ai.cloud.ovh.net/ > output.txt
+https://<appid>.app.gra.training.ai.cloud.ovh.net/ > output.txt
 ```
 
 ```bash
 curl -H “Authorization: Bearer <token>" \
-https://<jobid>.app.gra.training.ai.cloud.ovh.net/version > output.json
+https://<appid>.app.gra.training.ai.cloud.ovh.net/version > output.json
 ```
 
 ## Post request
 
 ```bash
 curl -X POST \
--H 'Authorization: Bearer <token>' \
--H 'Content-Type: application/json' \
--d ‘{“text”:“What is my consommation”}’ \
-https://<jobid>.app.gra.training.ai.cloud.ovh.net/model/parse > output.json
+-H "Authorization: Bearer <token>" \
+-H "Content-Type: application/json" \
+-d '{"sender":"test_user","message":"I go with my bike at work"}' \
+https://<appid>.app.gra.training.ai.cloud.ovh.net/webhooks/rest/webhook \
+> output.json
 ```
 
 ```bash
@@ -158,7 +159,7 @@ curl -X POST \
 -H 'Authorization: Bearer <token>' \
 -H 'Content-Type: application/json' \
 -d ‘{“text”:“I go to work with my bike”}’ \
-https://<jobid>.app.gra.training.ai.cloud.ovh.net/model/parse > output.json
+https://<appid>.app.gra.training.ai.cloud.ovh.net/model/parse > output.json
 ```
 
 If you want to use more functionnality, please fill free to go into this link provide by Rasa, which show all of the requests we can do with the api. 
@@ -174,12 +175,12 @@ Here is also a link to postman who shows us how to use the restfull api with som
 When you finish to use your model, don’t forget to stop the app. To do this simply run in the terminal : 
 
 ```bash
-ovhai app stop <jobid>
+ovhai app stop <appid>
 ```
 
 If you want to restart the rasa api, simply run again in a terminal : 
 
 ```bash
 ovhai app start --token <token> \
-<jobid>
+<appid>
 ```
