@@ -47,3 +47,35 @@ class ValidateBilan(FormValidationAction):
             return {"house": slot_value}
         else:
             return {"house": None}
+
+    @staticmethod
+    def way_to_move() -> List[Text]:
+        return ["metro", "RER", "car", "motorbike", "bike", "on foot", "common transport"]
+
+    def validate_typeoftransport(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        if slot_value.lower() in self.way_to_move():
+            return {"typeoftransport": slot_value}
+        else:
+            return {"typeoftransport": None}
+
+    @staticmethod
+    def way_of_working() -> List[Text]:
+        return ["remote working", "on site", "teleworking", "on a building"]
+
+    def validate_typeofwork(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        if slot_value.lower() in self.way_of_working():
+            return {"typeofwork": slot_value}
+        else:
+            return {"typeofwork": None}
