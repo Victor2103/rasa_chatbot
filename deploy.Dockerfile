@@ -12,5 +12,5 @@ ENV HOME=/workspace
 
 EXPOSE 5005
 #EXPOSE 8000
-CMD cd rasa_bot; rasa run -m models --enable-api --cors '*'
-#CMD ./script.sh
+#CMD cd rasa_bot; rasa run -m models --enable-api --cors '*'
+CMD ./script.sh
