@@ -52,9 +52,6 @@ responses:
   utter_consummation:
   - text: "I don't know I need more information"
 
-  utter_help:
-  - text: "Yes, I can can you tell me where you live ?"
-
   utter_inform_house:
   - text: "Ok you tell me you live in a house/appartment. "
 
