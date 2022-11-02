@@ -73,6 +73,12 @@ responses:
   utter_ask_bilan_typeofwork:
   - text: "Do you work on remote or do you go on site ?"
 
+  utter_submit:
+  - text: "Thank you for submitting the form"
+
+  utter_slots_values:
+  - text: "Here are the values of what you entered : {house}, {typeoftransport}, {typeofwork} "
+
 actions:
 - validate_bilan
 
