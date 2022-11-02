@@ -6,5 +6,5 @@
 #gnome-terminal -- bash -c "cd rasa_bot && rasa run -m models --enable-api --cors '*'"
 #gnome-terminal -- bash -c "cd django_app && python3 manage.py runserver"
 
-cd rasa_bot && rasa run -m models --enable-api --cors '*' -i 127.0.0.1 &
-cd django_app && python3 manage.py runserver 0.0.0.0:8000
+cd rasa_bot && rasa run -m models --enable-api --cors '*' --debug &
+cd rasa_bot && rasa run --debug actions

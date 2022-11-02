@@ -149,7 +149,7 @@ https://<appid>.app.gra.training.ai.cloud.ovh.net/version > output.json
 curl -X POST \
 -H "Authorization: Bearer <token>" \
 -H "Content-Type: application/json" \
--d '{"sender":"test_user","message":"I go with my bike at work"}' \
+-d '{"sender":"test_user","message":"Can you improve my consommation"}' \
 https://<appid>.app.gra.training.ai.cloud.ovh.net/webhooks/rest/webhook \
 > output.json
 ```

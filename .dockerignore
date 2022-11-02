@@ -7,4 +7,3 @@ docker-compose.yml
 requirements_pandas.txt
 README.md
 django_app
-script.sh
