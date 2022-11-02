@@ -38,7 +38,7 @@ rules:
 
 - rule: Activate the bilan form
   steps:
-  - intent: consummation
+  - intent: help
   - action: bilan
   - active_loop: bilan
 
