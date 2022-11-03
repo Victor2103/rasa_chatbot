@@ -1,0 +1,85 @@
+version: "3.1"
+intents: 
+  - greetting
+  - bye
+  - consummation
+  - help
+  - inform_house
+  - inform_transport
+  - inform_work
+
+entities:
+- house
+- typeoftransport
+- typeofwork
+
+slots:
+  house:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: house
+  typeoftransport:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: typeoftransport
+  typeofwork:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: typeofwork
+
+forms:
+  bilan:
+    required_slots:
+      - house
+      - typeoftransport
+      - typeofwork
+
+
+
+responses:
+  utter_greetting:
+  - text: "Hello you"
+
+  utter_bye:
+  - text: "Good bye ! "
+
+  utter_consummation:
+  - text: "I don't know I need more information"
+
+  utter_inform_house:
+  - text: "Ok you tell me you live in a house/appartment. "
+
+  utter_inform_transport:
+  - text: "Ok I understand you take you car/bike/etc to go to work."
+
+  utter_inform_work:
+  - text: "Ok so you work only on remote/on site."
+
+  utter_ask_bilan_house:
+  - text: "Can you tell me were you live ? Is it an appartment a house ?"
+
+  utter_ask_bilan_typeoftransport:
+  - text: "Can you tell me which transport you take to go to work ?"
+
+  utter_ask_bilan_typeofwork:
+  - text: "Do you work on remote or do you go on site ?"
+
+  utter_submit:
+  - text: "Thank you for submitting the form"
+
+  utter_slots_values:
+  - text: "Here are the values of what you entered : {house}, {typeoftransport}, {typeofwork} "
+
+actions:
+- validate_bilan
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
