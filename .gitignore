@@ -1,0 +1,6 @@
+process_data/archive/
+rasa_bot/models/
+__pycache__/
+cert
+.env
+.ipynb_checkpoints/
