@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  rasa:
+    container_name: "rasa_server"
+    ports:
+      - 5005:5005
+    build:
+      context: rasa_bot
+      dockerfile: rasa.Dockerfile
+  django:
+    container_name: "django_server"
+    ports:
+      - 8000:8000
+    build:
+      context: django_app
+      dockerfile: django.Dockerfile

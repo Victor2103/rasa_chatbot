@@ -1,0 +1,7 @@
+.env
+rasa_bot/.ipynb_checkpoints/
+rasa_bot/.rasa
+rasa_bot/models
+.ipynb_checkpoints/
+cert/
+

@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+- rule: Detect greetting when the user want to do this 
+  steps:
+  - intent: greetting
+  - action: utter_greetting
+
+- rule: Detect bye when the user want to do this 
+  steps:
+  - intent: bye
+  - action: utter_bye
+
+- rule: Detect consummation when the user want to do this 
+  steps:
+  - intent: consummation
+  - action: utter_consummation
+
+- rule: Detect help when the user want to do this 
+  steps:
+  - intent: help
+  - action: utter_help
+
