@@ -22,9 +22,9 @@ class ContactFormView(FormView):
         url = "https://a26c825a-9b57-495a-b0fd-415e0452e47f.app.gra.training.ai.cloud.ovh.net/webhooks/rest/webhook"
         data = form.cleaned_data
         json_data = {"sender": data['user'], "message": data["message"]}
-        form.cleaned_data["response"] = requests.post(url=url, json=json_data, headers={
+        data = requests.post(url=url, json=json_data, headers={
                                                       "Authorization": "Bearer ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO", "Content-Type": "application/json"})
-        print(form.cleaned_data["response"].text)
+        print(data.text)
         return super().form_valid(form)
 
     def get_success_url(self) -> str:

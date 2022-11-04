@@ -4,5 +4,5 @@ rasa_bot/.rasa
 rasa_bot/models
 .ipynb_checkpoints/
 cert/
-**/__pycache/
-
+**/**/__pycache__
+.vscode/
