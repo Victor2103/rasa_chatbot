@@ -23,7 +23,7 @@ class ContactFormView(FormView):
         data = form.cleaned_data
         json_data = {"sender": data['user'], "message": data["message"]}
         data = requests.post(url=url, json=json_data, headers={
-                                                      "Authorization": "Bearer ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO", "Content-Type": "application/json"})
+            "Authorization": "Bearer ++9O7ZjOT8eEkAha1GywfOFQXnJvttgYXbmdBOxLS7sW/s4TqtdNJBVMqRav+vzO", "Content-Type": "application/json"})
         print(data.text)
         return super().form_valid(form)
 
