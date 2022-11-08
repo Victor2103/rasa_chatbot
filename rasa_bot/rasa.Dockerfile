@@ -12,4 +12,4 @@ ENV HOME=/workspace
 
 
 EXPOSE 5005
-CMD rasa run -m models --enable-api --cors '*' -i 127.0.0.1
+CMD rasa run -m models --enable-api --cors '*' --credentials "credentials.yml" & rasa run actions
