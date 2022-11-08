@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from .models import UserConversation
 from django.core.signing import Signer
 import jwt
+import os
 
 import requests
 
@@ -11,9 +12,7 @@ import requests
 
 
 def index(request):
-    encoded_jwt = jwt.encode({"some":"payload"},"7ILG3hCY4DNN6QAxK-j1X-tdK0XoSAf5x2tK2Gb7qgM",algorithm="HS256")
-    print(encoded_jwt)
-    
+    encoded_jwt = jwt.encode({"some":"payload"},os.getenv("SECRET_KEY"),algorithm="HS256")
     return render(request, template_name='index.html',context={"jwebtoken":encoded_jwt})
 
 
