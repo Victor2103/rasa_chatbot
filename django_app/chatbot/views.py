@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 from .models import UserConversation
+from django.core.signing import Signer
+import jwt
 
 import requests
 
@@ -9,7 +11,10 @@ import requests
 
 
 def index(request):
-    return render(request, template_name='index.html')
+    encoded_jwt = jwt.encode({"some":"payload"},"7ILG3hCY4DNN6QAxK-j1X-tdK0XoSAf5x2tK2Gb7qgM",algorithm="HS256")
+    print(encoded_jwt)
+    
+    return render(request, template_name='index.html',context={"jwebtoken":encoded_jwt})
 
 
 class ContactFormView(CreateView):
