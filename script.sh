@@ -8,4 +8,4 @@
 
 cd rasa_bot && rasa run -m models --enable-api --cors '*' --debug &
 cd rasa_bot && rasa run --debug actions &
-cd django_app && python3 manage.py runserver
+cd django_app && python3 manage.py runserver 0.0.0.0:8000
