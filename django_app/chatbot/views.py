@@ -14,7 +14,11 @@ import requests
 def index(request):
     encoded_jwt = jwt.encode({"some": "payload"}, os.getenv(
         "JWT_SECRET_KEY"), algorithm=str(os.getenv("JWT_ALGORITHM")))
-    return render(request, template_name='index.html', context={"jwebtoken": encoded_jwt})
+    # Create the url back end to have the rasa model train.
+    api_url = os.environ.get("API_URL")
+    if (api_url == None):
+        api_url = 'http://localhost:5005/'
+    return render(request, template_name='index.html', context={"jwebtoken": encoded_jwt, "url": api_url})
 
 
 class ContactFormView(CreateView):
