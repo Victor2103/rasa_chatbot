@@ -12,4 +12,4 @@ ENV HOME=/workspace
 
 
 EXPOSE 5005
-CMD rasa run -m models --enable-api --cors '*' -i 127.0.0.1
+CMD rasa run -m models --cors '*' --debug --connector socketio --credentials "crendentials.yml" & rasa run actions

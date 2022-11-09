@@ -6,4 +6,3 @@ docker-compose.yml
 .gitignore
 requirements_pandas.txt
 README.md
-django_app
