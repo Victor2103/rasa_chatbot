@@ -12,4 +12,4 @@ ENV HOME=/workspace
 
 
 EXPOSE 5005
-CMD rasa run -m models --cors '*' --debug --connector socketio --credentials "crendentials.yml" & rasa run actions
+CMD rasa run -m trained-models --cors '*' --debug --connector socketio --credentials "crendentials.yml" -endpoints "endpoints.yml" & rasa run actions
