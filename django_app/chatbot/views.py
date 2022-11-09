@@ -12,13 +12,14 @@ import requests
 
 
 def index(request):
-    encoded_jwt = jwt.encode({"some":"payload"},os.getenv("SECRET_KEY"),algorithm="HS256")
-    return render(request, template_name='index.html',context={"jwebtoken":encoded_jwt})
+    encoded_jwt = jwt.encode({"some": "payload"}, os.getenv(
+        "JWT_SECRET_KEY"), algorithm=str(os.getenv("JWT_ALGORITHM")))
+    return render(request, template_name='index.html', context={"jwebtoken": encoded_jwt})
 
 
 class ContactFormView(CreateView):
-    model=UserConversation
-    fields=['name','message']
+    model = UserConversation
+    fields = ['name', 'message']
 
     def form_valid(self, form):
         # This method is called when valid form data has been POSTed.
