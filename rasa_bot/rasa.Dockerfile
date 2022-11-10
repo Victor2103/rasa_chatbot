@@ -17,4 +17,4 @@ EXPOSE 5005
 #CMD rasa train --force --out trained-models
 
 #Command for deployment passed as argument in the ovhaicli
-#CMD rasa run -m trained-models --cors '*' --debug --connector socketio --credentials "crendentials.yml" --endpoints "endpoints.yml" & rasa run actions
+#CMD rasa run -m trained-models --cors "*" --debug --connector socketio --credentials "crendentials.yml" --endpoints "endpoints.yml" & rasa run actions
