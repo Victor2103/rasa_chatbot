@@ -40,17 +40,17 @@ For each line, a value of the token is written. Don’t forget to save it becaus
 
 Here is the command to create the notebook. We add two tokens. One for RO only and the other for read and write.
 
-```bash
+``` bash
 ovhai notebook run conda vscode \
---name vscode-ovh-machine \
---framework-version conda-py39-cuda11.2-v22-4 \
---volume <read-only-name-of-container>@<region>/nb-data:/workspace/data:RO:cache \
---volume <write-name-container>@<region>/:/workspace/saved_models:RW \
---volume https://github.com/Victor2103/rasa_chatbot.git:/workspace/public-repo-git:RO \
---cpu 10 \
---token <token> \
---label model=rasabotRO \
--s ~/.ssh/id_rsa.pub
+	--name vscode-ovh-chatbot \
+	--framework-version conda-py39-cuda11.2-v22-4 \
+	--volume <data-to-train-container>@GRA/data:/workspace/data:RO:cache \
+	--volume <model-output-container>@GRA/:/workspace/trained-models:RW \
+	--volume https://github.com/Victor2103/rasa_chatbot.git:/workspace/public-repo-git:RO \
+	--cpu 10 \
+	--token <token> \
+	--label model=rasabotRO \
+	-s ~/.ssh/id_rsa.pub
 ```
 
 You can also of course stop the notebook when you want. It is really advice to stop the notebook when you don’t using it. With the CLI command, you can restart the notebook when you want. To do this, get the ID of your notebook with “ovhai notebook ls” and then run
