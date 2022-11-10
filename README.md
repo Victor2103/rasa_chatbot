@@ -40,17 +40,17 @@ For each line, a value of the token is written. Don’t forget to save it becaus
 
 Here is the command to create the notebook. We add two tokens. One for RO only and the other for read and write.
 
-```bash
+``` bash
 ovhai notebook run conda vscode \
---name vscode-ovh-machine \
---framework-version conda-py39-cuda11.2-v22-4 \
---volume <read-only-name-of-container>@<region>/nb-data:/workspace/data:RO:cache \
---volume <write-name-container>@<region>/:/workspace/saved_models:RW \
---volume https://github.com/Victor2103/rasa_chatbot.git:/workspace/public-repo-git:RO \
---cpu 10 \
---token <token> \
---label model=rasabotRO \
--s ~/.ssh/id_rsa.pub
+	--name vscode-ovh-chatbot \
+	--framework-version conda-py39-cuda11.2-v22-4 \
+	--volume <data-to-train-container>@GRA/data:/workspace/data:RO:cache \
+	--volume <model-output-container>@GRA/:/workspace/trained-models:RW \
+	--volume https://github.com/Victor2103/rasa_chatbot.git:/workspace/public-repo-git:RO \
+	--cpu 10 \
+	--token <token> \
+	--label model=rasabotRO \
+	-s ~/.ssh/id_rsa.pub
 ```
 
 You can also of course stop the notebook when you want. It is really advice to stop the notebook when you don’t using it. With the CLI command, you can restart the notebook when you want. To do this, get the ID of your notebook with “ovhai notebook ls” and then run
@@ -80,95 +80,119 @@ rasa train
 
 If you want to save the model in your object storage, put your model on the folder saved_model. Then, he will be available on the private container <writenamecontainer> at the root. 
 
-# Train the model on the cloud with the tool AI Training
+# Train the model with AI Training
 
-Here is the command to launch on the cli command. You must have the cli command install. You also have to create a public cloud project and an user connected with the ovhai command. See further information in user management on the ovhcloud control panel. Here is the command to launch :
-
-```bash
-ovhai job run <yourdockerhubId>/big_chatbot:latest \
---gpu 2 \
---volume <containerwithdata>@<region>/:/workspace/data:RO \
---volume <containerforsavingthemodel>@<region>/rasa-models:/workspace/rasa_bot/models:RW \
--- bash -c "cd rasa_bot && rasa train --force --fixed-model-name customer-model"
-```
-
-Once the job is over, your model will be in the object storage <containerforsavingthedata> mounted in rasa-models. You can download it and put it in the folder rasa_bot/models. With this, you will be able to have a model in your machine. You can test it locally by running “rasa shell” directly in your machine in the directory rasa_bot. 
-
-If you want to launch the job again to get a new model because your model is note precise, run :
+You can clone the repository git in a folder on your computer. Then create the docker image and push it inside your repository dockerhub or in a private manage directory directly on OVHcloud. Here are the two commands to run inside the folder rasa_bot :
 
 ```bash
-ovhai job rerun <jobid> \
---gpu 4 \
---volume <containerwithdata>@<region>/:/workspace/data:RO \
---volume <containerforsavingthemodel>@<region>/rasa-models:/workspace/rasa_bot/models:RW \
--- bash -c "cd rasa_bot && rasa train --force --fixed-model-name customer-model"
+docker build .  -f rasa.Dockerfile -t <yourdockerhubId>/rasa-back:latest
+docker push <yourdockerhubId>/rasa-back:latest
 ```
 
-Now that you have a model, we can deploy it to use it with a framework. 
+Here I decided to use my docker id.
 
-# Deploy your model
-
-Rasa framework provides an api with your model. So, we have to make only the front end if we want to use our model. To deploy the rasa model, you have to create a docker file, push it to your dockerhub and then run an app with the ovhai control command. Here is the command to create and push the docker image. 
+Once your docker image is created and pushed into the repo, you can directly use the ovhai command to create your training of the model. Here is the full command. The training is about 5 minutes. You can change the time of the training if you change the number of gpu or the config file for the rasa training. But if you change the config file, the model will be less precise.
 
 ```bash
-docker build . -f deploy.Dockerfile -t <yourdockerhubId>/rasa-model:latest
-docker push <yourdockerhubId>/rasa-model:latest
+ovhai job run --name rasa-chatbot \
+--gpu 1 \
+--volume <data-to-train-container>@GRA/data:/workspace/data:RO:cache \
+--volume <model-output-container>@GRA/rasa-models:/workspace/trained-models:RW \
+<yourdockerhubId>/rasa-chatbot:latest \
+-- bash -c "rasa train --force --out trained-models"
 ```
 
-Once you docker image is pushed, you can create the app by running this command which use the ovhai control command. 
+For more explanation about the CLI command for AI Training please click on this link : [CLI Reference](https://docs.ovh.com/gb/en/publiccloud/ai/cli/overview-cli/).
+
+Explanation here for the command inside the dockerfile. 
+- rasa train : This command will start to train a model with the nlu data you provide. The training launch some component and follow a pipeline defined in your file config.yml. 
+- --force : This line is an option for the rasa train command. It permits to force rasa to train a model and not only search if the data provided as been already train. This option will retrain a model even if the data hasn't changed. 
+- --out : This argument permits to say how you want to save your model. Here we saved the model in the folder trained-models and in the container at the mounted prefix "rasa-models". 
+
+# Test your model
+
+You can test shortly your model if you want. To do this, simply tap the command rasa shell in a terminal at the root of the rasa_bot folder. You will see your model loading and after, you will be able to speak with the chatbot. To have all of the functionnalities of your model, tap in another terminal at the root of the rasa_bot folder, the command : rasa run actions. Before running this two commands, don't forget to upload your rasa model in the object storage <model-output-container> into a folder name models inside the rasa_bot folder. If you forget to upload it, a model will be present already but not the model you trained.
+
+Once you've run this 2 commands, you can speak to your chatbot ! Try to say hi or to ask about your electric consommation. He will be able to answer your questions. Maybe He can't tell you your consummation but you can have a small discussion. 
+
+If you're not satisfied about the model because your chatbot doesn't respond very well, you can run this command. It will run again the job again and create a new model.
 
 ```bash
-ovhai app run –name rasa-model \
-–token <token> \
-–default-http-port 5005 \
-–cpu 4 \
-<yourdockerhubId>/rasa-model:latest
+ovhai job rerun <job_id> 
 ```
 
-Now, you can wait that your app is started. Once she is started, you can go into the url and connect with the token you provide juste before. 
-
-To use the API, we can make some post requests or some get requests to use the model and predict some message. Here are some examples of get and post requests with curl. The output will be save in a file called “output.json”. Verify that the response in rasa is send in json, for example the get request of the base url is not a json file.  
-
-## Get request
-
-Here are two examples of get request, one will give us the response when we go to the url and the other will give us the version of the rasa model. 
+To get the job id of the previous job, just run this command to get the list of the job you've run before. 
 
 ```bash
-curl -H “Authorization: Bearer <token>" \
-https://<appid>.app.gra.training.ai.cloud.ovh.net/ > output.txt
+ovhai job ls
 ```
+
+More explanation are here : [CLI Reference](https://docs.ovh.com/gb/en/publiccloud/ai/cli/overview-cli/).
+
+Once you have your model is ready, we must deploy the model to use it. This will be ensure with the tool AI Deploy from the public cloud.
+
+# Deploy your chatbot
+
+For simplicity, we will use the ovhai control command again. And with one command, you will have your model running securily on a https link !
+
+The container use for deploying your chatbot is the same as the one we use for train our chatbot. Let's run : 
 
 ```bash
-curl -H “Authorization: Bearer <token>" \
-https://<appid>.app.gra.training.ai.cloud.ovh.net/version > output.json
+ovhai app run --name rasa-back \
+--unsecure-http \
+--default-http-port 5005 \
+--cpu 4 \
+--volume <model-output-container>@GRA/rasa-models:/workspace/trained-models:RO \
+<yourdockerhubId>/rasa-chatbot:latest \
+-- bash -c 'rasa run -m trained-models --cors "*" --debug --connector socketio --credentials "crendentials.yml" --endpoints "endpoints.yml" & rasa run actions'
 ```
 
-## Post request
+Now, you can wait that your app is started. Once she is started, you can go on the url and.. nothing special will append just a small message with **hello from Rasa 3.2.0** ! In fact to speak with the chatbot, we need to launch another server, a front end server. To do this, I will use the framework Django. Don't worry, everything is on the git if you clone the repository. 
+
+# Create a Front End App
+
+## Create your environnements variable 
+
+So to launch the front end app, you will have to create two environments variables. The first one will be the secret key for the json web token signature to access your rasa chatbot. The second one will be the secret key to run the django application. 
+
+To create the secret key for django app you can follow this tutorial : [Django Secret Key](https://humberto.io/blog/tldr-generate-django-secret-key/) and for the json web token key, generate a strong password with 30 characters minimal. Don't use the extended ASCII or the key will be wrong. Lots of website generate some strings but you don't know if they keep your string. It is better to use a local app like keepass or a package in python. 
+
+You have you two environnements variables. Time to save it ! create a '.env' file inside the folder django_app/django_app. Your .env should look like this : 
+
+```
+SECRET_KEY=your-django-secret-key-generated-before
+JWT_SECRET_KEY=your-jwebtoken-generated-before
+JWT_ALGORITHM=HS256
+```
+
+## Create the dockerfile
+
+Let's now run the app on AI Deploy ! To do so, you will need to create a new dockerfile. Go on the folder django_app and run simply : 
 
 ```bash
-curl -X POST \
--H "Authorization: Bearer <token>" \
--H "Content-Type: application/json" \
--d '{"sender":"test_user","message":"Can you improve my consommation"}' \
-https://<appid>.app.gra.training.ai.cloud.ovh.net/webhooks/rest/webhook \
-> output.json
+docker build . -f django.Dockerfile -t <yourdockerhubId>/front-end-chatbot:latest
+docker push <yourdockerhubId>/front-end-chatbot:latest
 ```
+
+## Create the app
+
+Now let's finish this tutorial and run the front end application with the ovhai CLI. But just before, get the url of your back end rasa chatbot. It will be something like this : **https://259b36ff-fc61-46a5-9a25-8d9a7b9f8ff6.app.gra.training.ai.cloud.ovh.net/**. You can have it with the cli by listing all of your app and get the one you want. We will call this URL "RasaURL". 
+
+Now you can run this command : 
 
 ```bash
-curl -X POST \
--H 'Authorization: Bearer <token>' \
--H 'Content-Type: application/json' \
--d ‘{“text”:“I go to work with my bike”}’ \
-https://<appid>.app.gra.training.ai.cloud.ovh.net/model/parse > output.json
+ovhai app run --name rasa-front \
+--token <token> \
+--default-http-port 8000 \
+-e API_URL=<RasaURL> \
+--cpu 2 \
+<yourdockerhubId>/front-end-chatbot:latest \
 ```
 
-If you want to use more functionnality, please fill free to go into this link provide by Rasa, which show all of the requests we can do with the api. 
+That's it ! On the URL of this app, you can speak to your chatbot ! Try to have a simple conversation ! And if you reload the page, you can notice that the chatbot go back to zero. So every user is different on each machine. 
 
-[Rasa & Rasa Pro Documentation](https://rasa.com/docs/rasa/pages/http-api/)
+If you don't use the app, don't forget to stop it. 
 
-Here is also a link to postman who shows us how to use the restfull api with some littles examples. 
-
-[Official Rasa Workspace | Postman API Network](https://www.postman.com/rasahq/workspace/official-rasa-workspace/overview)
 
 # Stop your app when unused
 

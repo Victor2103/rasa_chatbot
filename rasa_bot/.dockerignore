@@ -1,5 +1,5 @@
 tests
-rasa.Dockerfile
+rasadeploy.Dockerfile
 data
-domain.yml
-config.yml
+.rasa
+models
