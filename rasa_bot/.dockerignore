@@ -1,5 +1,6 @@
 tests
-rasadeploy.Dockerfile
+rasa.Dockerfile
+actions.Dockerfile
 data
 .rasa
 models
