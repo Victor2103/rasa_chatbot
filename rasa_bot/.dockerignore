@@ -3,4 +3,4 @@ rasa.Dockerfile
 actions.Dockerfile
 data
 .rasa
-models
+#models
