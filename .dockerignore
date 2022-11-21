@@ -1,8 +1,0 @@
-process_data
-chatette
-Dockerfile
-deploy.Dockerfile
-docker-compose.yml
-.gitignore
-requirements_pandas.txt
-README.md
