@@ -71,6 +71,8 @@ Once your notebook is running, open a terminal and go into the folder public-rep
 ssh <notebook-id>@<region>.training.ai.cloud.ovh.net
 ```
 
+Then just run this in the terminal to train the model. 
+
 ```bash
 conda install pip
 python3 -m pip install --no-cache-dir -r requirements_rasa.txt
@@ -79,6 +81,30 @@ rasa train
 ```
 
 If you want to save the model in your object storage, put your model on the folder saved_model. Then, he will be available on the private container <writenamecontainer> at the root. 
+Once you've run your model, you can speak with him. To do so, just run in a terminal this command : 
+
+```bash
+rasa shell
+```
+
+Of course, with this command, your chatbot will not have the functionnality provided. To have all of the functionnalities and a fonctionnal chatbot, follow the end of the tutorial ! 
+
+# Play with a Jupyter notebook (not necessarily). 
+
+You're more familiar with juoyter notebook rather than vscode. It is not a problem. I make a file where you can create, train and speak to a rasa chatbot. So to do it you will need to create a jupyter notebook. It really easy ! You can attach one volume if you want to save the model created. But don't forget to put the model inside the container before stop your notebook. Here is the command to run : 
+
+```bash
+ovhai notebook run conda jupyterlab \
+--name <name-notebook> \
+--framework-version conda-py39-cuda11.2-v22-4 \
+--volume <model-output-container>@GRA/:/workspace/trained-models:RW \
+--volume https://github.com/Victor2103/rasa_chatbot.git:/workspace/public-repo-git:RO \
+--cpu 10 \
+--token <token> \
+```
+
+It will take one or two minutes to create your notebook and then you will be able to run the jupyter notebook. This notebook is located in the folder jupyter inside the public repository git. At the end of the notebook, you can easily speak to the chatbot. 
+
 
 # Train the model with AI Training
 
