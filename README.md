@@ -89,7 +89,7 @@ rasa shell
 
 Of course, with this command, your chatbot will not have the functionnality provided. To have all of the functionnalities and a fonctionnal chatbot, follow the end of the tutorial ! 
 
-# Play with a Jupyter notebook (not necessarily). 
+# Play with a Jupyter notebook (optional). 
 
 You're more familiar with juoyter notebook rather than vscode. It is not a problem. I make a file where you can create, train and speak to a rasa chatbot. So to do it you will need to create a jupyter notebook. It really easy ! You can attach one volume if you want to save the model created. But don't forget to put the model inside the container before stop your notebook. Here is the command to run : 
 
@@ -156,6 +156,22 @@ ovhai job ls
 More explanation are here : [CLI Reference](https://docs.ovh.com/gb/en/publiccloud/ai/cli/overview-cli/).
 
 Once you have your model is ready, we must deploy the model to use it. This will be ensure with the tool AI Deploy from the public cloud.
+
+# Test it locally (optional)
+
+You want to use your chatbot locally. You can do it because there is a docker compose in the project and to run the chatbot on your local machine you will just have to run one command ! But before running the command, you must go inside one dockerfile to specify directly the command to run. Let's do this. In the file rasa.Dockerfile inside the rasa_bot folder uncomment the last line. Then at the root of the git repository run : 
+
+```bash
+docker compose -f "docker-compose.yml" up -d --build
+```
+
+This command will create 3 containers, one for the rasa model, one for the rasa custom actions and one for the front end server handled by django. Once the three containers are running (it will take 5 minutes max), you can go directly on your [localhost](http://0.0.0.0:8000/) on port 8000, the port of your front end app. 
+
+Once you've finished testing the rasa model, don't forget to stop the containers and comment the last line of the rasa.Dockerfile. To stop the containers, run this command : 
+
+```bash
+docker compose down
+```
 
 # Deploy your chatbot
 
