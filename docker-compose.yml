@@ -12,6 +12,8 @@ services:
   rasa:
     image: rasa
     container_name: "rasa_server"
+    environment:
+      - JWT_SECRET=pM:@k'X@G}aJTHB/*Mo.GW[m#*3"n\87M*U/8'K_=H\YovyREt&Q*
     ports:
       - 5005:5005
       - 5055:5055
