@@ -16,4 +16,4 @@ ENV HOME=/workspace
 EXPOSE 5055
 
 # Command to run for the actions
-CMD rasa run actions
+#CMD rasa run actions
