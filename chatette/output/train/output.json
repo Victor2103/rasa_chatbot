@@ -4,17 +4,17 @@
       {
         "entities": [],
         "intent": "greetting",
-        "text": "hello, what's up ?"
+        "text": "hello"
       },
       {
         "entities": [],
         "intent": "greetting",
-        "text": "hi, what's up ?"
+        "text": "Good morning, what's up ?"
       },
       {
         "entities": [],
         "intent": "greetting",
-        "text": "good morning, what's up ?"
+        "text": "good morning"
       },
       {
         "entities": [],
@@ -24,22 +24,27 @@
       {
         "entities": [],
         "intent": "greetting",
-        "text": "hello"
+        "text": "hi"
       },
       {
         "entities": [],
         "intent": "bye",
-        "text": "Ok then see you"
+        "text": "Bye"
       },
       {
         "entities": [],
         "intent": "bye",
-        "text": "See you"
+        "text": "Ok then bye"
       },
       {
         "entities": [],
         "intent": "bye",
-        "text": "Thanks, see you"
+        "text": "Thank you, good bye"
+      },
+      {
+        "entities": [],
+        "intent": "bye",
+        "text": "ok then good bye"
       },
       {
         "entities": [],
@@ -48,18 +53,8 @@
       },
       {
         "entities": [],
-        "intent": "bye",
-        "text": "thanks, nice day"
-      },
-      {
-        "entities": [],
         "intent": "consummation",
-        "text": "I want to know my consommation"
-      },
-      {
-        "entities": [],
-        "intent": "consummation",
-        "text": "Tell me my usage"
+        "text": "I want to know my usage"
       },
       {
         "entities": [],
@@ -69,12 +64,42 @@
       {
         "entities": [],
         "intent": "consummation",
-        "text": "What's my consommation"
+        "text": "I want to know my consommation"
       },
       {
         "entities": [],
         "intent": "consummation",
         "text": "What's my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "What's my usage"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Can you tell me my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "What's my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Tell me my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Tell me my usage"
+      },
+      {
+        "entities": [],
+        "intent": "consummation",
+        "text": "Can you tell me my usage"
       },
       {
         "entities": [],
@@ -88,88 +113,28 @@
       },
       {
         "entities": [],
-        "intent": "consummation",
-        "text": "I want to know my usage"
-      },
-      {
-        "entities": [],
-        "intent": "consummation",
-        "text": "Can you tell me my usage"
-      },
-      {
-        "entities": [],
-        "intent": "consummation",
-        "text": "Tell me my consuming"
-      },
-      {
-        "entities": [],
-        "intent": "consummation",
-        "text": "Can you tell me my consuming"
-      },
-      {
-        "entities": [],
-        "intent": "consummation",
-        "text": "What's my usage"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "Can you upgrade my consommation"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "What can I do for improve my consommation"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "Is there any ways to develop my consommation"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "Are they any good ways to develop my consommation"
-      },
-      {
-        "entities": [],
         "intent": "help",
         "text": "Is there any ways to upgrade my consommation"
       },
       {
         "entities": [],
         "intent": "help",
-        "text": "Are they any good ways to upgrade my usage"
+        "text": "What can I do for develop my consuming"
       },
       {
         "entities": [],
         "intent": "help",
-        "text": "Can you increase my usage"
+        "text": "Is there any ways to increase my usage"
       },
       {
         "entities": [],
         "intent": "help",
-        "text": "Is there any ways to ameliorate my consommation"
+        "text": "What can I do for upgrade my consuming"
       },
       {
         "entities": [],
         "intent": "help",
-        "text": "Help me to upgrade my consuming"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "What can I do for improve my consuming"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "Are they any good ways to ameliorate my consommation"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "I want to upgrade my consuming"
+        "text": "Help me to upgrade my usage"
       },
       {
         "entities": [],
@@ -179,57 +144,17 @@
       {
         "entities": [],
         "intent": "help",
-        "text": "Can you improve my consommation"
+        "text": "Help me to upgrade my consuming"
       },
       {
         "entities": [],
         "intent": "help",
-        "text": "Are they any good ways to upgrade my consuming"
+        "text": "I want to upgrade my consommation"
       },
       {
         "entities": [],
         "intent": "help",
-        "text": "Help me to develop my usage"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "Help me to develop my consommation"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "I want to ameliorate my consuming"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "Can you improve my usage"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "Are they any good ways to improve my usage"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "Are they any good ways to boost my consuming"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "Is there any ways to improve my usage"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "Is there any ways to upgrade my usage"
-      },
-      {
-        "entities": [],
-        "intent": "help",
-        "text": "I want to boost my consommation"
+        "text": "Help me to increase my consommation"
       },
       {
         "entities": [],
@@ -239,17 +164,67 @@
       {
         "entities": [],
         "intent": "help",
+        "text": "Can you boost my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
         "text": "Is there any ways to ameliorate my usage"
       },
       {
         "entities": [],
         "intent": "help",
-        "text": "Can you boost my consommation"
+        "text": "Can you develop my usage"
       },
       {
         "entities": [],
         "intent": "help",
-        "text": "What can I do for ameliorate my usage"
+        "text": "I want to develop my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to increase my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to improve my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Can you develop my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Help me to develop my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to upgrade my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Are they any good ways to upgrade my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Can you improve my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Help me to ameliorate my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "What can I do for develop my consommation"
       },
       {
         "entities": [],
@@ -259,49 +234,62 @@
       {
         "entities": [],
         "intent": "help",
-        "text": "Is there any ways to ameliorate my consuming"
+        "text": "Is there any ways to boost my consuming"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Can you upgrade my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "What can I do for ameliorate my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Is there any ways to develop my usage"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "Is there any ways to increase my consommation"
+      },
+      {
+        "entities": [],
+        "intent": "help",
+        "text": "What can I do for boost my consommation"
       },
       {
         "entities": [
           {
             "end": 21,
-            "entity": "house",
-            "start": 12,
-            "value": "apartment"
+            "entity": "typeofhouse",
+            "start": 16,
+            "value": "house"
           }
         ],
         "intent": "inform_house",
-        "text": "I live in a apartment."
+        "text": "I'm living in a house."
       },
       {
         "entities": [
           {
-            "end": 19,
-            "entity": "house",
-            "start": 12,
-            "value": "chamber"
+            "end": 5,
+            "entity": "typeofhouse",
+            "start": 0,
+            "value": "suite"
           }
         ],
         "intent": "inform_house",
-        "text": "I live in a chamber."
-      },
-      {
-        "entities": [
-          {
-            "end": 16,
-            "entity": "house",
-            "start": 12,
-            "value": "flat"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "I live in a flat."
+        "text": "suite"
       },
       {
         "entities": [
           {
             "end": 17,
-            "entity": "house",
+            "entity": "typeofhouse",
             "start": 12,
             "value": "house"
           }
@@ -313,7 +301,19 @@
         "entities": [
           {
             "end": 21,
-            "entity": "house",
+            "entity": "typeofhouse",
+            "start": 12,
+            "value": "apartment"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "I live in a apartment."
+      },
+      {
+        "entities": [
+          {
+            "end": 21,
+            "entity": "typeofhouse",
             "start": 12,
             "value": "residence"
           }
@@ -324,8 +324,116 @@
       {
         "entities": [
           {
+            "end": 19,
+            "entity": "typeofhouse",
+            "start": 12,
+            "value": "chamber"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "I live in a chamber."
+      },
+      {
+        "entities": [
+          {
+            "end": 7,
+            "entity": "typeofhouse",
+            "start": 0,
+            "value": "chamber"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "chamber"
+      },
+      {
+        "entities": [
+          {
+            "end": 9,
+            "entity": "typeofhouse",
+            "start": 0,
+            "value": "residence"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "residence"
+      },
+      {
+        "entities": [
+          {
+            "end": 25,
+            "entity": "typeofhouse",
+            "start": 16,
+            "value": "apartment"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "I'm living in a apartment."
+      },
+      {
+        "entities": [
+          {
+            "end": 29,
+            "entity": "typeofhouse",
+            "start": 25,
+            "value": "flat"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "I've got a location in a flat."
+      },
+      {
+        "entities": [
+          {
+            "end": 5,
+            "entity": "typeofhouse",
+            "start": 0,
+            "value": "house"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "house"
+      },
+      {
+        "entities": [
+          {
+            "end": 4,
+            "entity": "typeofhouse",
+            "start": 0,
+            "value": "flat"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "flat"
+      },
+      {
+        "entities": [
+          {
+            "end": 30,
+            "entity": "typeofhouse",
+            "start": 25,
+            "value": "house"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "I've got a location in a house."
+      },
+      {
+        "entities": [
+          {
+            "end": 20,
+            "entity": "typeofhouse",
+            "start": 16,
+            "value": "flat"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "I'm living in a flat."
+      },
+      {
+        "entities": [
+          {
             "end": 17,
-            "entity": "house",
+            "entity": "typeofhouse",
             "start": 12,
             "value": "suite"
           }
@@ -337,55 +445,7 @@
         "entities": [
           {
             "end": 25,
-            "entity": "house",
-            "start": 16,
-            "value": "apartment"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "I'm living in a apartment."
-      },
-      {
-        "entities": [
-          {
-            "end": 23,
-            "entity": "house",
-            "start": 16,
-            "value": "chamber"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "I'm living in a chamber."
-      },
-      {
-        "entities": [
-          {
-            "end": 20,
-            "entity": "house",
-            "start": 16,
-            "value": "flat"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "I'm living in a flat."
-      },
-      {
-        "entities": [
-          {
-            "end": 21,
-            "entity": "house",
-            "start": 16,
-            "value": "house"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "I'm living in a house."
-      },
-      {
-        "entities": [
-          {
-            "end": 25,
-            "entity": "house",
+            "entity": "typeofhouse",
             "start": 16,
             "value": "residence"
           }
@@ -396,68 +456,20 @@
       {
         "entities": [
           {
-            "end": 21,
-            "entity": "house",
-            "start": 16,
-            "value": "suite"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "I'm living in a suite."
-      },
-      {
-        "entities": [
-          {
-            "end": 34,
-            "entity": "house",
-            "start": 25,
-            "value": "apartment"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "I've got a location in a apartment."
-      },
-      {
-        "entities": [
-          {
-            "end": 32,
-            "entity": "house",
-            "start": 25,
-            "value": "chamber"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "I've got a location in a chamber."
-      },
-      {
-        "entities": [
-          {
-            "end": 29,
-            "entity": "house",
-            "start": 25,
+            "end": 16,
+            "entity": "typeofhouse",
+            "start": 12,
             "value": "flat"
           }
         ],
         "intent": "inform_house",
-        "text": "I've got a location in a flat."
-      },
-      {
-        "entities": [
-          {
-            "end": 30,
-            "entity": "house",
-            "start": 25,
-            "value": "house"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "I've got a location in a house."
+        "text": "I live in a flat."
       },
       {
         "entities": [
           {
             "end": 34,
-            "entity": "house",
+            "entity": "typeofhouse",
             "start": 25,
             "value": "residence"
           }
@@ -468,20 +480,32 @@
       {
         "entities": [
           {
-            "end": 30,
-            "entity": "house",
+            "end": 32,
+            "entity": "typeofhouse",
             "start": 25,
+            "value": "chamber"
+          }
+        ],
+        "intent": "inform_house",
+        "text": "I've got a location in a chamber."
+      },
+      {
+        "entities": [
+          {
+            "end": 21,
+            "entity": "typeofhouse",
+            "start": 16,
             "value": "suite"
           }
         ],
         "intent": "inform_house",
-        "text": "I've got a location in a suite."
+        "text": "I'm living in a suite."
       },
       {
         "entities": [
           {
             "end": 9,
-            "entity": "house",
+            "entity": "typeofhouse",
             "start": 0,
             "value": "apartment"
           }
@@ -492,62 +516,50 @@
       {
         "entities": [
           {
-            "end": 7,
-            "entity": "house",
-            "start": 0,
+            "end": 23,
+            "entity": "typeofhouse",
+            "start": 16,
             "value": "chamber"
           }
         ],
         "intent": "inform_house",
-        "text": "chamber"
+        "text": "I'm living in a chamber."
       },
       {
         "entities": [
           {
-            "end": 4,
-            "entity": "house",
-            "start": 0,
-            "value": "flat"
+            "end": 34,
+            "entity": "typeofhouse",
+            "start": 25,
+            "value": "apartment"
           }
         ],
         "intent": "inform_house",
-        "text": "flat"
+        "text": "I've got a location in a apartment."
       },
       {
         "entities": [
           {
-            "end": 5,
-            "entity": "house",
-            "start": 0,
-            "value": "house"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "house"
-      },
-      {
-        "entities": [
-          {
-            "end": 9,
-            "entity": "house",
-            "start": 0,
-            "value": "residence"
-          }
-        ],
-        "intent": "inform_house",
-        "text": "residence"
-      },
-      {
-        "entities": [
-          {
-            "end": 5,
-            "entity": "house",
-            "start": 0,
+            "end": 30,
+            "entity": "typeofhouse",
+            "start": 25,
             "value": "suite"
           }
         ],
         "intent": "inform_house",
-        "text": "suite"
+        "text": "I've got a location in a suite."
+      },
+      {
+        "entities": [
+          {
+            "end": 24,
+            "entity": "typeoftransport",
+            "start": 17,
+            "value": "on foot"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I travel with my on foot."
       },
       {
         "entities": [
@@ -555,11 +567,119 @@
             "end": 14,
             "entity": "typeoftransport",
             "start": 11,
+            "value": "car"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I pick the car to go to work."
+      },
+      {
+        "entities": [
+          {
+            "end": 21,
+            "entity": "typeoftransport",
+            "start": 17,
+            "value": "bike"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I travel with my bike."
+      },
+      {
+        "entities": [
+          {
+            "end": 22,
+            "entity": "typeoftransport",
+            "start": 19,
             "value": "bus"
           }
         ],
         "intent": "inform_transport",
-        "text": "I pick the bus to go to work."
+        "text": "I usually take the bus."
+      },
+      {
+        "entities": [
+          {
+            "end": 16,
+            "entity": "typeoftransport",
+            "start": 0,
+            "value": "common transport"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "common transport"
+      },
+      {
+        "entities": [
+          {
+            "end": 26,
+            "entity": "typeoftransport",
+            "start": 19,
+            "value": "on foot"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I usually take the on foot."
+      },
+      {
+        "entities": [
+          {
+            "end": 23,
+            "entity": "typeoftransport",
+            "start": 19,
+            "value": "bike"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I usually take the bike."
+      },
+      {
+        "entities": [
+          {
+            "end": 16,
+            "entity": "typeoftransport",
+            "start": 11,
+            "value": "metro"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I take the metro."
+      },
+      {
+        "entities": [
+          {
+            "end": 3,
+            "entity": "typeoftransport",
+            "start": 0,
+            "value": "car"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "car"
+      },
+      {
+        "entities": [
+          {
+            "end": 20,
+            "entity": "typeoftransport",
+            "start": 17,
+            "value": "bus"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I travel with my bus."
+      },
+      {
+        "entities": [
+          {
+            "end": 18,
+            "entity": "typeoftransport",
+            "start": 11,
+            "value": "on foot"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I pick the on foot to go to work."
       },
       {
         "entities": [
@@ -583,103 +703,7 @@
           }
         ],
         "intent": "inform_transport",
-        "text": "I take the RER."
-      },
-      {
-        "entities": [
-          {
-            "end": 24,
-            "entity": "typeoftransport",
-            "start": 17,
-            "value": "on foot"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I travel with my on foot."
-      },
-      {
-        "entities": [
-          {
-            "end": 7,
-            "entity": "typeoftransport",
-            "start": 0,
-            "value": "on foot"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "on foot"
-      },
-      {
-        "entities": [
-          {
-            "end": 14,
-            "entity": "typeoftransport",
-            "start": 11,
-            "value": "car"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I take the car."
-      },
-      {
-        "entities": [
-          {
-            "end": 20,
-            "entity": "typeoftransport",
-            "start": 17,
-            "value": "RER"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I travel with my RER."
-      },
-      {
-        "entities": [
-          {
-            "end": 22,
-            "entity": "typeoftransport",
-            "start": 17,
-            "value": "metro"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I travel with my metro."
-      },
-      {
-        "entities": [
-          {
-            "end": 14,
-            "entity": "typeoftransport",
-            "start": 11,
-            "value": "RER"
-          }
-        ],
-        "intent": "inform_transport",
         "text": "I pick the RER to go to work."
-      },
-      {
-        "entities": [
-          {
-            "end": 15,
-            "entity": "typeoftransport",
-            "start": 11,
-            "value": "bike"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I pick the bike to go to work."
-      },
-      {
-        "entities": [
-          {
-            "end": 22,
-            "entity": "typeoftransport",
-            "start": 19,
-            "value": "bus"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I usually take the bus."
       },
       {
         "entities": [
@@ -696,54 +720,6 @@
       {
         "entities": [
           {
-            "end": 35,
-            "entity": "typeoftransport",
-            "start": 19,
-            "value": "common transport"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I usually take the common transport."
-      },
-      {
-        "entities": [
-          {
-            "end": 14,
-            "entity": "typeoftransport",
-            "start": 11,
-            "value": "car"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I pick the car to go to work."
-      },
-      {
-        "entities": [
-          {
-            "end": 27,
-            "entity": "typeoftransport",
-            "start": 11,
-            "value": "common transport"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I pick the common transport to go to work."
-      },
-      {
-        "entities": [
-          {
-            "end": 33,
-            "entity": "typeoftransport",
-            "start": 17,
-            "value": "common transport"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I travel with my common transport."
-      },
-      {
-        "entities": [
-          {
             "end": 15,
             "entity": "typeoftransport",
             "start": 11,
@@ -756,74 +732,14 @@
       {
         "entities": [
           {
-            "end": 22,
+            "end": 20,
             "entity": "typeoftransport",
-            "start": 19,
+            "start": 17,
             "value": "RER"
           }
         ],
         "intent": "inform_transport",
-        "text": "I usually take the RER."
-      },
-      {
-        "entities": [
-          {
-            "end": 23,
-            "entity": "typeoftransport",
-            "start": 19,
-            "value": "bike"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I usually take the bike."
-      },
-      {
-        "entities": [
-          {
-            "end": 26,
-            "entity": "typeoftransport",
-            "start": 19,
-            "value": "on foot"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I usually take the on foot."
-      },
-      {
-        "entities": [
-          {
-            "end": 20,
-            "entity": "typeoftransport",
-            "start": 17,
-            "value": "bus"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I travel with my bus."
-      },
-      {
-        "entities": [
-          {
-            "end": 21,
-            "entity": "typeoftransport",
-            "start": 17,
-            "value": "bike"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I travel with my bike."
-      },
-      {
-        "entities": [
-          {
-            "end": 14,
-            "entity": "typeoftransport",
-            "start": 11,
-            "value": "bus"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I take the bus."
+        "text": "I travel with my RER."
       },
       {
         "entities": [
@@ -852,6 +768,18 @@
       {
         "entities": [
           {
+            "end": 14,
+            "entity": "typeoftransport",
+            "start": 11,
+            "value": "car"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I take the car."
+      },
+      {
+        "entities": [
+          {
             "end": 27,
             "entity": "typeoftransport",
             "start": 11,
@@ -860,6 +788,30 @@
         ],
         "intent": "inform_transport",
         "text": "I take the common transport."
+      },
+      {
+        "entities": [
+          {
+            "end": 22,
+            "entity": "typeoftransport",
+            "start": 19,
+            "value": "RER"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I usually take the RER."
+      },
+      {
+        "entities": [
+          {
+            "end": 35,
+            "entity": "typeoftransport",
+            "start": 19,
+            "value": "common transport"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I usually take the common transport."
       },
       {
         "entities": [
@@ -876,6 +828,18 @@
       {
         "entities": [
           {
+            "end": 20,
+            "entity": "typeoftransport",
+            "start": 17,
+            "value": "car"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I travel with my car."
+      },
+      {
+        "entities": [
+          {
             "end": 5,
             "entity": "typeoftransport",
             "start": 0,
@@ -888,50 +852,38 @@
       {
         "entities": [
           {
-            "end": 3,
+            "end": 33,
             "entity": "typeoftransport",
-            "start": 0,
-            "value": "car"
+            "start": 17,
+            "value": "common transport"
           }
         ],
         "intent": "inform_transport",
-        "text": "car"
+        "text": "I travel with my common transport."
       },
       {
         "entities": [
           {
-            "end": 18,
+            "end": 27,
             "entity": "typeoftransport",
             "start": 11,
+            "value": "common transport"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I pick the common transport to go to work."
+      },
+      {
+        "entities": [
+          {
+            "end": 7,
+            "entity": "typeoftransport",
+            "start": 0,
             "value": "on foot"
           }
         ],
         "intent": "inform_transport",
-        "text": "I pick the on foot to go to work."
-      },
-      {
-        "entities": [
-          {
-            "end": 16,
-            "entity": "typeoftransport",
-            "start": 11,
-            "value": "metro"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I take the metro."
-      },
-      {
-        "entities": [
-          {
-            "end": 20,
-            "entity": "typeoftransport",
-            "start": 17,
-            "value": "car"
-          }
-        ],
-        "intent": "inform_transport",
-        "text": "I travel with my car."
+        "text": "on foot"
       },
       {
         "entities": [
@@ -948,6 +900,18 @@
       {
         "entities": [
           {
+            "end": 14,
+            "entity": "typeoftransport",
+            "start": 11,
+            "value": "bus"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I pick the bus to go to work."
+      },
+      {
+        "entities": [
+          {
             "end": 3,
             "entity": "typeoftransport",
             "start": 0,
@@ -960,98 +924,50 @@
       {
         "entities": [
           {
-            "end": 16,
+            "end": 22,
             "entity": "typeoftransport",
-            "start": 0,
-            "value": "common transport"
+            "start": 17,
+            "value": "metro"
           }
         ],
         "intent": "inform_transport",
-        "text": "common transport"
-      },
-      {
-        "entities": [
-          {
-            "end": 26,
-            "entity": "typeofwork",
-            "start": 15,
-            "value": "teleworking"
-          }
-        ],
-        "intent": "inform_work",
-        "text": "I usually task teleworking."
-      },
-      {
-        "entities": [
-          {
-            "end": 28,
-            "entity": "typeofwork",
-            "start": 15,
-            "value": "on a building"
-          }
-        ],
-        "intent": "inform_work",
-        "text": "I usually task on a building."
-      },
-      {
-        "entities": [
-          {
-            "end": 33,
-            "entity": "typeofwork",
-            "start": 26,
-            "value": "on site"
-          }
-        ],
-        "intent": "inform_work",
-        "text": "I usually perform to work on site."
-      },
-      {
-        "entities": [
-          {
-            "end": 37,
-            "entity": "typeofwork",
-            "start": 26,
-            "value": "teleworking"
-          }
-        ],
-        "intent": "inform_work",
-        "text": "I usually perform to work teleworking."
-      },
-      {
-        "entities": [
-          {
-            "end": 13,
-            "entity": "typeofwork",
-            "start": 0,
-            "value": "on a building"
-          }
-        ],
-        "intent": "inform_work",
-        "text": "on a building"
-      },
-      {
-        "entities": [
-          {
-            "end": 22,
-            "entity": "typeofwork",
-            "start": 15,
-            "value": "on site"
-          }
-        ],
-        "intent": "inform_work",
-        "text": "I usually task on site."
+        "text": "I travel with my metro."
       },
       {
         "entities": [
           {
             "end": 14,
-            "entity": "typeofwork",
-            "start": 7,
-            "value": "on site"
+            "entity": "typeoftransport",
+            "start": 11,
+            "value": "RER"
           }
         ],
-        "intent": "inform_work",
-        "text": "I work on site."
+        "intent": "inform_transport",
+        "text": "I take the RER."
+      },
+      {
+        "entities": [
+          {
+            "end": 15,
+            "entity": "typeoftransport",
+            "start": 11,
+            "value": "bike"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I pick the bike to go to work."
+      },
+      {
+        "entities": [
+          {
+            "end": 14,
+            "entity": "typeoftransport",
+            "start": 11,
+            "value": "bus"
+          }
+        ],
+        "intent": "inform_transport",
+        "text": "I take the bus."
       },
       {
         "entities": [
@@ -1080,14 +996,50 @@
       {
         "entities": [
           {
-            "end": 29,
+            "end": 18,
             "entity": "typeofwork",
-            "start": 15,
-            "value": "remote working"
+            "start": 7,
+            "value": "teleworking"
           }
         ],
         "intent": "inform_work",
-        "text": "I usually task remote working."
+        "text": "I work teleworking."
+      },
+      {
+        "entities": [
+          {
+            "end": 14,
+            "entity": "typeofwork",
+            "start": 7,
+            "value": "on site"
+          }
+        ],
+        "intent": "inform_work",
+        "text": "I work on site."
+      },
+      {
+        "entities": [
+          {
+            "end": 28,
+            "entity": "typeofwork",
+            "start": 15,
+            "value": "on a building"
+          }
+        ],
+        "intent": "inform_work",
+        "text": "I usually task on a building."
+      },
+      {
+        "entities": [
+          {
+            "end": 13,
+            "entity": "typeofwork",
+            "start": 0,
+            "value": "on a building"
+          }
+        ],
+        "intent": "inform_work",
+        "text": "on a building"
       },
       {
         "entities": [
@@ -1104,26 +1056,14 @@
       {
         "entities": [
           {
-            "end": 11,
+            "end": 40,
             "entity": "typeofwork",
-            "start": 0,
-            "value": "teleworking"
-          }
-        ],
-        "intent": "inform_work",
-        "text": "teleworking"
-      },
-      {
-        "entities": [
-          {
-            "end": 14,
-            "entity": "typeofwork",
-            "start": 0,
+            "start": 26,
             "value": "remote working"
           }
         ],
         "intent": "inform_work",
-        "text": "remote working"
+        "text": "I usually perform to work remote working."
       },
       {
         "entities": [
@@ -1140,26 +1080,86 @@
       {
         "entities": [
           {
-            "end": 18,
+            "end": 11,
             "entity": "typeofwork",
-            "start": 7,
+            "start": 0,
             "value": "teleworking"
           }
         ],
         "intent": "inform_work",
-        "text": "I work teleworking."
+        "text": "teleworking"
       },
       {
         "entities": [
           {
-            "end": 40,
+            "end": 33,
             "entity": "typeofwork",
             "start": 26,
+            "value": "on site"
+          }
+        ],
+        "intent": "inform_work",
+        "text": "I usually perform to work on site."
+      },
+      {
+        "entities": [
+          {
+            "end": 37,
+            "entity": "typeofwork",
+            "start": 26,
+            "value": "teleworking"
+          }
+        ],
+        "intent": "inform_work",
+        "text": "I usually perform to work teleworking."
+      },
+      {
+        "entities": [
+          {
+            "end": 22,
+            "entity": "typeofwork",
+            "start": 15,
+            "value": "on site"
+          }
+        ],
+        "intent": "inform_work",
+        "text": "I usually task on site."
+      },
+      {
+        "entities": [
+          {
+            "end": 29,
+            "entity": "typeofwork",
+            "start": 15,
             "value": "remote working"
           }
         ],
         "intent": "inform_work",
-        "text": "I usually perform to work remote working."
+        "text": "I usually task remote working."
+      },
+      {
+        "entities": [
+          {
+            "end": 14,
+            "entity": "typeofwork",
+            "start": 0,
+            "value": "remote working"
+          }
+        ],
+        "intent": "inform_work",
+        "text": "remote working"
+      },
+      {
+        "entities": [
+          {
+            "end": 26,
+            "entity": "typeofwork",
+            "start": 15,
+            "value": "teleworking"
+          }
+        ],
+        "intent": "inform_work",
+        "text": "I usually task teleworking."
       }
     ],
     "entity_synonyms": [],
