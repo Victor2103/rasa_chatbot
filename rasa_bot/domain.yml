@@ -9,17 +9,17 @@ intents:
   - inform_work
 
 entities:
-- house
+- typeofhouse
 - typeoftransport
 - typeofwork
 
 slots:
-  house:
+  typeofhouse:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
-      entity: house
+      entity: typeofhouse
   typeoftransport:
     type: text
     influence_conversation: false
@@ -36,7 +36,7 @@ slots:
 forms:
   bilan:
     required_slots:
-      - house
+      - typeofhouse
       - typeoftransport
       - typeofwork
 
@@ -61,7 +61,7 @@ responses:
   utter_inform_work:
   - text: "Ok so you work only on remote/on site."
 
-  utter_ask_bilan_house:
+  utter_ask_bilan_typeofhouse:
   - text: "Can you tell me were you live ? Is it an appartment a house ?"
 
   utter_ask_bilan_typeoftransport:
@@ -74,7 +74,7 @@ responses:
   - text: "Thank you for submitting the form"
 
   utter_slots_values:
-  - text: "Here are the values of what you entered : {house}, {typeoftransport}, {typeofwork} "
+  - text: "Here are the values of what you entered : {typeofhouse}, {typeoftransport}, {typeofwork} "
 
 actions:
 - validate_bilan

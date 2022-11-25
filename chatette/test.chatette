@@ -16,10 +16,10 @@
     ~[asking_good_ways] ~[improve-verb] my ~[consommation]
 
 %[inform_house](100)
-    I live in a @[house]. 
-    I'm living in a @[house].
-    I've got a location in a @[house]. 
-    @[house]
+    I live in a @[typeofhouse]. 
+    I'm living in a @[typeofhouse].
+    I've got a location in a @[typeofhouse]. 
+    @[typeofhouse]
 
 
 %[inform_transport](100)
