@@ -36,7 +36,7 @@ class ValidateBilan(FormValidationAction):
     def type_of_house() -> List[Text]:
         return ["appartment", "house", "flat"]
 
-    def validate_house(
+    def validate_typeofhouse(
         self,
         slot_value: Any,
         dispatcher: CollectingDispatcher,
@@ -44,13 +44,13 @@ class ValidateBilan(FormValidationAction):
         domain: DomainDict,
     ) -> Dict[Text, Any]:
         if slot_value.lower() in self.type_of_house():
-            return {"house": slot_value}
+            return {"typeofhouse": slot_value.lower()}
         else:
-            return {"house": None}
+            return {"typeofhouse": None}
 
     @staticmethod
     def way_to_move() -> List[Text]:
-        return ["metro", "RER", "car", "motorbike", "bike", "on foot", "common transport"]
+        return ["metro", "rer", "car", "motorbike", "bike", "on foot", "common transport"]
 
     def validate_typeoftransport(
         self,
@@ -60,7 +60,7 @@ class ValidateBilan(FormValidationAction):
         domain: DomainDict,
     ) -> Dict[Text, Any]:
         if slot_value.lower() in self.way_to_move():
-            return {"typeoftransport": slot_value}
+            return {"typeoftransport": slot_value.lower()}
         else:
             return {"typeoftransport": None}
 
@@ -76,6 +76,6 @@ class ValidateBilan(FormValidationAction):
         domain: DomainDict,
     ) -> Dict[Text, Any]:
         if slot_value.lower() in self.way_of_working():
-            return {"typeofwork": slot_value}
+            return {"typeofwork": slot_value.lower()}
         else:
             return {"typeofwork": None}

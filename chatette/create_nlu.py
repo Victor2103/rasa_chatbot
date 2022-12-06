@@ -26,8 +26,8 @@ for i in my_data:
         intents.append(i["intent"])
 
 
-with open("../rasa_bot/data/nlu.yml", "w", encoding="utf-8") as f:
-    # with open("yml_test/nlu.yml", "w", encoding="utf-8") as f:
+#with open("../rasa_bot/data/nlu.yml", "w", encoding="utf-8") as f:
+with open("yml_test/nlu.yml", "w", encoding="utf-8") as f:
     f.write('version: "3.1"\n')
     f.write('nlu:\n')
     for i in intents:

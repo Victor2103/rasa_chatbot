@@ -1,0 +1,4 @@
+chatette==1.6.3
+enum-compat==0.0.3
+future==0.18.2
+six==1.16.0
