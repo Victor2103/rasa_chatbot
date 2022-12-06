@@ -53,7 +53,7 @@ responses:
   - text: "I don't know I need more information"
 
   utter_inform_house:
-  - text: "Ok you tell me you live in a house/appartment. "
+  - text: "Ok you tell me you live in a {typeofhouse}. "
 
   utter_inform_transport:
   - text: "Ok I understand you take you car/bike/etc to go to work."
