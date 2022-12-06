@@ -1,18 +1,14 @@
-version: "3.1"
-intents: 
-  - greetting
-  - bye
-  - consummation
-  - help
-  - inform_house
-  - inform_transport
-  - inform_work
-
+version: '3.1'
+intents:
+- bye
+- consummation
+- greetting
+- help
+- inform
 entities:
-- typeofhouse
 - typeoftransport
+- typeofhouse
 - typeofwork
-
 slots:
   typeofhouse:
     type: text
@@ -32,54 +28,35 @@ slots:
     mappings:
     - type: from_entity
       entity: typeofwork
-
 forms:
   bilan:
     required_slots:
-      - typeofhouse
-      - typeoftransport
-      - typeofwork
-
-
-
+    - typeofhouse
+    - typeoftransport
+    - typeofwork
 responses:
   utter_greetting:
-  - text: "Hello you"
-
+  - text: Hello you
   utter_bye:
-  - text: "Good bye ! "
-
+  - text: 'Good bye ! '
   utter_consummation:
-  - text: "I don't know I need more information"
-
-  utter_inform_house:
-  - text: "Ok you tell me you live in a {typeofhouse}. "
-
-  utter_inform_transport:
-  - text: "Ok I understand you take you car/bike/etc to go to work."
-
-  utter_inform_work:
-  - text: "Ok so you work only on remote/on site."
-
+  - text: I don't know I need more information
   utter_ask_bilan_typeofhouse:
-  - text: "Can you tell me were you live ? Is it an appartment a house ?"
-
+  - text: Can you tell me were you live ? Is it an appartment a house ?
   utter_ask_bilan_typeoftransport:
-  - text: "Can you tell me which transport you take to go to work ?"
-
+  - text: Can you tell me which transport you take to go to work ?
   utter_ask_bilan_typeofwork:
-  - text: "Do you work on remote or do you go on site ?"
-
+  - text: Do you work on remote or do you go on site ?
   utter_submit:
-  - text: "Thank you for submitting the form"
-
+  - text: Thank you for submitting the form
   utter_slots_values:
-  - text: "Here are the values of what you entered : {typeofhouse}, {typeoftransport}, {typeofwork} "
-
+  - text: 'Here are the values of what you entered : {typeofhouse}, {typeoftransport}, {typeofwork} '
 actions:
+- utter_bye
+- utter_greetting
+- utter_slots_values
+- utter_submit
 - validate_bilan
-
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

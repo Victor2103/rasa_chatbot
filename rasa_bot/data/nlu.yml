@@ -14,6 +14,7 @@ nlu:
     - Thank you, good bye
     - ok then good bye
     - thanks, good bye
+    - bye
 - intent: consummation
   examples: |
     - I want to know my usage
@@ -60,7 +61,8 @@ nlu:
     - Is there any ways to develop my usage
     - Is there any ways to increase my consommation
     - What can I do for boost my consommation
-- intent: inform_house
+    - can you help me ?
+- intent: inform
   examples: |
     - I'm living in a [house](typeofhouse).
     - [suite](typeofhouse)
@@ -86,8 +88,6 @@ nlu:
     - I'm living in a [chamber](typeofhouse).
     - I've got a location in a [apartment](typeofhouse).
     - I've got a location in a [suite](typeofhouse).
-- intent: inform_transport
-  examples: |
     - I travel with my [on foot](typeoftransport).
     - I pick the [car](typeoftransport) to go to work.
     - I travel with my [bike](typeoftransport).
@@ -123,8 +123,6 @@ nlu:
     - I take the [RER](typeoftransport).
     - I pick the [bike](typeoftransport) to go to work.
     - I take the [bus](typeoftransport).
-- intent: inform_work
-  examples: |
     - [on site](typeofwork)
     - I usually perform to work [on a building](typeofwork).
     - I work [teleworking](typeofwork).
@@ -141,3 +139,7 @@ nlu:
     - I usually task [remote working](typeofwork).
     - [remote working](typeofwork)
     - I usually task [teleworking](typeofwork).
+    - it is a [house](typeofhouse)
+    - i take the [bus](typeoftransport)
+    - i take the [RER](typeoftransport)
+    - I work [on site](typeofwork)
