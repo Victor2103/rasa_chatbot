@@ -2,142 +2,138 @@ version: "3.1"
 nlu:
 - intent: greetting
   examples: |
-    - hello
     - Good morning, what's up ?
-    - good morning
-    - Hi
     - hi
+    - Hello
+    - hi, what's up ?
+    - Good morning
 - intent: bye
   examples: |
-    - Bye
-    - Ok then bye
-    - Thank you, good bye
-    - ok then good bye
+    - Good bye
+    - nice day
+    - thank you, good bye
     - thanks, good bye
+    - thanks, see you
 - intent: consummation
   examples: |
-    - I want to know my usage
+    - I want to know my consuming
     - Can you tell me my consommation
+    - Tell me my consuming
+    - Tell me my consommation
+    - Tell me my usage
     - I want to know my consommation
     - What's my consuming
-    - What's my usage
+    - I want to know my usage
     - Can you tell me my consuming
+    - What's my usage
     - What's my consommation
-    - Tell me my consuming
-    - Tell me my usage
     - Can you tell me my usage
-    - I want to know my consuming
-    - Tell me my consommation
 - intent: help
   examples: |
-    - Is there any ways to upgrade my consommation
-    - What can I do for develop my consuming
-    - Is there any ways to increase my usage
-    - What can I do for upgrade my consuming
-    - Help me to upgrade my usage
-    - Can you ameliorate my consommation
-    - Help me to upgrade my consuming
-    - I want to upgrade my consommation
-    - Help me to increase my consommation
-    - What can I do for increase my usage
+    - What can I do for upgrade my consommation
+    - Is there any ways to upgrade my consuming
+    - Are they any good ways to develop my consommation
+    - I want to develop my consuming
+    - Is there any ways to increase my consuming
+    - Is there any ways to improve my consuming
+    - Are they any good ways to develop my consuming
     - Can you boost my usage
-    - Is there any ways to ameliorate my usage
-    - Can you develop my usage
-    - I want to develop my consommation
-    - Are they any good ways to increase my usage
-    - Are they any good ways to improve my consommation
-    - Can you develop my consommation
-    - Help me to develop my consommation
-    - Are they any good ways to upgrade my usage
+    - Can you boost my consommation
+    - Are they any good ways to increase my consuming
+    - What can I do for improve my consommation
+    - What can I do for improve my usage
+    - Can you increase my consommation
+    - I want to upgrade my consommation
+    - I want to increase my usage
+    - Is there any ways to improve my usage
     - Are they any good ways to upgrade my consuming
-    - Can you improve my consuming
-    - Help me to ameliorate my usage
-    - What can I do for develop my consommation
-    - I want to improve my consuming
-    - Is there any ways to boost my consuming
-    - Can you upgrade my usage
+    - Can you develop my consuming
+    - Can you increase my usage
+    - Help me to increase my consommation
+    - Can you develop my usage
+    - What can I do for upgrade my consuming
+    - Is there any ways to improve my consommation
+    - What can I do for increase my consommation
+    - Can you improve my consommation
+    - Is there any ways to upgrade my usage
+    - Is there any ways to develop my consommation
+    - Help me to boost my consuming
     - What can I do for ameliorate my usage
-    - Is there any ways to develop my usage
-    - Is there any ways to increase my consommation
-    - What can I do for boost my consommation
-- intent: inform_house
+    - What can I do for develop my usage
+- intent: inform
   examples: |
-    - I'm living in a [house](typeofhouse).
     - [suite](typeofhouse)
-    - I live in a [house](typeofhouse).
-    - I live in a [apartment](typeofhouse).
-    - I live in a [residence](typeofhouse).
-    - I live in a [chamber](typeofhouse).
-    - [chamber](typeofhouse)
-    - [residence](typeofhouse)
-    - I'm living in a [apartment](typeofhouse).
-    - I've got a location in a [flat](typeofhouse).
-    - [house](typeofhouse)
-    - [flat](typeofhouse)
-    - I've got a location in a [house](typeofhouse).
-    - I'm living in a [flat](typeofhouse).
-    - I live in a [suite](typeofhouse).
-    - I'm living in a [residence](typeofhouse).
-    - I live in a [flat](typeofhouse).
-    - I've got a location in a [residence](typeofhouse).
-    - I've got a location in a [chamber](typeofhouse).
-    - I'm living in a [suite](typeofhouse).
-    - [apartment](typeofhouse)
-    - I'm living in a [chamber](typeofhouse).
-    - I've got a location in a [apartment](typeofhouse).
-    - I've got a location in a [suite](typeofhouse).
-- intent: inform_transport
-  examples: |
-    - I travel with my [on foot](typeoftransport).
-    - I pick the [car](typeoftransport) to go to work.
-    - I travel with my [bike](typeoftransport).
-    - I usually take the [bus](typeoftransport).
-    - [common transport](typeoftransport)
-    - I usually take the [on foot](typeoftransport).
-    - I usually take the [bike](typeoftransport).
-    - I take the [metro](typeoftransport).
-    - [car](typeoftransport)
-    - I travel with my [bus](typeoftransport).
-    - I pick the [on foot](typeoftransport) to go to work.
-    - I pick the [metro](typeoftransport) to go to work.
-    - I pick the [RER](typeoftransport) to go to work.
-    - I usually take the [metro](typeoftransport).
-    - I take the [bike](typeoftransport).
-    - I travel with my [RER](typeoftransport).
-    - I take the [on foot](typeoftransport).
-    - I usually take the [car](typeoftransport).
-    - I take the [car](typeoftransport).
-    - I take the [common transport](typeoftransport).
-    - I usually take the [RER](typeoftransport).
-    - I usually take the [common transport](typeoftransport).
-    - [RER](typeoftransport)
-    - I travel with my [car](typeoftransport).
-    - [metro](typeoftransport)
-    - I travel with my [common transport](typeoftransport).
-    - I pick the [common transport](typeoftransport) to go to work.
-    - [on foot](typeoftransport)
-    - [bike](typeoftransport)
-    - I pick the [bus](typeoftransport) to go to work.
-    - [bus](typeoftransport)
-    - I travel with my [metro](typeoftransport).
-    - I take the [RER](typeoftransport).
-    - I pick the [bike](typeoftransport) to go to work.
-    - I take the [bus](typeoftransport).
-- intent: inform_work
-  examples: |
-    - [on site](typeofwork)
-    - I usually perform to work [on a building](typeofwork).
-    - I work [teleworking](typeofwork).
-    - I work [on site](typeofwork).
-    - I usually task [on a building](typeofwork).
-    - [on a building](typeofwork)
-    - I work [on a building](typeofwork).
-    - I usually perform to work [remote working](typeofwork).
-    - I work [remote working](typeofwork).
-    - [teleworking](typeofwork)
-    - I usually perform to work [on site](typeofwork).
-    - I usually perform to work [teleworking](typeofwork).
-    - I usually task [on site](typeofwork).
-    - I usually task [remote working](typeofwork).
-    - [remote working](typeofwork)
     - I usually task [teleworking](typeofwork).
+    - I've got a location in a [suite](typeofhouse).
+    - I take the [RER](typeoftransport).
+    - [house](typeofhouse)
+    - [metro](typeoftransport)
+    - I take the [metro](typeoftransport).
+    - [teleworking](typeofwork)
+    - I usually take the [bike](typeoftransport).
+    - I'm living in a [flat](typeofhouse).
+    - I usually take the [metro](typeoftransport).
+    - I take the [bus](typeoftransport).
+    - I work [on a building](typeofwork).
+    - [apartment](typeofhouse)
+    - I usually take the [RER](typeoftransport).
+    - I've got a location in a [apartment](typeofhouse).
+    - I live in a [residence](typeofhouse).
+    - [on site](typeofwork)
+    - I'm living in a [suite](typeofhouse).
+    - I usually task [remote working](typeofwork).
+    - I've got a location in a [flat](typeofhouse).
+    - I pick the [RER](typeoftransport) to go to work.
+    - I usually take the [bus](typeoftransport).
+    - I've got a location in a [house](typeofhouse).
+    - I usually perform to work [on a building](typeofwork).
+    - I travel with my [on foot](typeoftransport).
+    - I work [on site](typeofwork).
+    - I usually take the [on foot](typeoftransport).
+    - I take the [on foot](typeoftransport).
+    - [RER](typeoftransport)
+    - I'm living in a [residence](typeofhouse).
+    - I work [remote working](typeofwork).
+    - I've got a location in a [chamber](typeofhouse).
+    - I usually take the [car](typeoftransport).
+    - I work [teleworking](typeofwork).
+    - [bus](typeoftransport)
+    - I travel with my [car](typeoftransport).
+    - I travel with my [RER](typeoftransport).
+    - [on a building](typeofwork)
+    - I live in a [house](typeofhouse).
+    - I take the [common transport](typeoftransport).
+    - [flat](typeofhouse)
+    - I live in a [apartment](typeofhouse).
+    - I travel with my [bus](typeoftransport).
+    - I take the [bike](typeoftransport).
+    - I'm living in a [house](typeofhouse).
+    - I live in a [flat](typeofhouse).
+    - I live in a [suite](typeofhouse).
+    - I pick the [common transport](typeoftransport) to go to work.
+    - I've got a location in a [residence](typeofhouse).
+    - I'm living in a [apartment](typeofhouse).
+    - I travel with my [common transport](typeoftransport).
+    - I pick the [on foot](typeoftransport) to go to work.
+    - I travel with my [metro](typeoftransport).
+    - [residence](typeofhouse)
+    - I take the [car](typeoftransport).
+    - I usually perform to work [remote working](typeofwork).
+    - [chamber](typeofhouse)
+    - [common transport](typeoftransport)
+    - [car](typeoftransport)
+    - I live in a [chamber](typeofhouse).
+    - [on foot](typeoftransport)
+    - I pick the [bus](typeoftransport) to go to work.
+    - I usually perform to work [teleworking](typeofwork).
+    - I travel with my [bike](typeoftransport).
+    - I pick the [car](typeoftransport) to go to work.
+    - I usually take the [common transport](typeoftransport).
+    - I'm living in a [chamber](typeofhouse).
+    - I usually task [on a building](typeofwork).
+    - I usually perform to work [on site](typeofwork).
+    - I usually task [on site](typeofwork).
+    - I pick the [bike](typeoftransport) to go to work.
+    - [bike](typeoftransport)
+    - [remote working](typeofwork)
+    - I pick the [metro](typeoftransport) to go to work.

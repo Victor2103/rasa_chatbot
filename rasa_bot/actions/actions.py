@@ -50,7 +50,7 @@ class ValidateBilan(FormValidationAction):
 
     @staticmethod
     def way_to_move() -> List[Text]:
-        return ["metro", "rer", "car", "motorbike", "bike", "on foot", "common transport"]
+        return ["metro", "rer", "car", "motorbike", "bike", "on foot", "common transport","bus"]
 
     def validate_typeoftransport(
         self,
