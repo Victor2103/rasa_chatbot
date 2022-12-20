@@ -6,21 +6,33 @@ services:
     container_name: "rasa_server"
     command: bash -c 'rasa run -m models --cors "*" --debug --connector socketio --credentials "crendentials.yml" --endpoints "endpoints.yml" & rasa run actions '
     environment:
-      - JWT_SECRET=<the-json-token-key-in-the-.env-file>
+      - JWT_SECRET=YidKvjahojQQ_x0sHZWBh3HU5M0pFAuUQ5xdxERdjrk
     ports:
       - 5005:5005
       - 5055:5055
     build:
       context: rasa_bot
       dockerfile: rasa.Dockerfile
-  django:
-    image: django
-    container_name: "django_server"
+  flask:
+    image: flask
+    container_name: "flask_server"
     ports:
-      - 8000:8000
+      - 5000:5000
     build:
-      context: django_app
-      dockerfile: django.Dockerfile
+      context: flask_app
+      dockerfile: flask.Dockerfile
+  
+  
+  
+  
+  #django:
+  #  image: django
+  #  container_name: "django_server"
+  #  ports:
+  #    - 8000:8000
+  #  build:
+  #    context: django_app
+  #    dockerfile: django.Dockerfile
 
 
 # Command to run : 
