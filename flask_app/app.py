@@ -11,11 +11,11 @@ app = Flask(__name__)
 def hello_world():
     encoded_jwt = jwt.encode({"user": "flask_app"},str(os.getenv('SECRET_KEY')) , algorithm="HS256")
     # Create the url back end to have the rasa model train.
-    print(str(os.getenv('SECRET_KEY')))
-    api_url = os.environ.get("API_URL")
+    #print(str(os.getenv('SECRET_KEY')))
+    api_url = os.getenv("API_URL")
     if (api_url == None):
         api_url = 'http://localhost:5005/'
     return render_template("chatbot.html",jwebtoken=encoded_jwt,url=api_url)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host="0.0.0.0")
