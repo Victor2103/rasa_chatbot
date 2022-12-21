@@ -13,15 +13,16 @@ services:
     build:
       context: rasa_bot
       dockerfile: rasa.Dockerfile
-  django:
-    image: django
-    container_name: "django_server"
+  flask:
+    image: flask
+    container_name: "flask_server"
     ports:
-      - 8000:8000
+      - 5000:5000
     build:
-      context: django_app
-      dockerfile: django.Dockerfile
-
-
+      context: flask_app
+      dockerfile: flask.Dockerfile
+  
+  
+  
 # Command to run : 
-# docker compose -f "docker-compose.yml" up -d --build
+# docker compose -f "flask-docker-compose.yml" up -d --build
