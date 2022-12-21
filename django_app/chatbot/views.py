@@ -12,7 +12,7 @@ import requests
 
 
 def index(request):
-    encoded_jwt = jwt.encode({"user": "django_app"}, os.getenv(
+    encoded_jwt = jwt.encode({"user": "django-app"}, os.getenv(
         "JWT_SECRET_KEY"), algorithm=str(os.getenv("JWT_ALGORITHM")))
     # Create the url back end to have the rasa model train.
     api_url = os.environ.get("API_URL")
